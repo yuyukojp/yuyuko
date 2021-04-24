@@ -25,6 +25,10 @@ class AncharGroup: NSObject {
     var tag_id : String = ""
     //定义主播模型的数组
     lazy var anchors : [AnchorModel] = [AnchorModel]()
+    //MARK: 构造函数
+    override init() {
+        
+    }
     
     init(dict : [String : NSObject]) {
         super.init()
