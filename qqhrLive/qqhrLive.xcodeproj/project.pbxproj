@@ -25,6 +25,8 @@
 		BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC393DEE262DACA700337FAB /* AncharGroup.swift */; };
 		BC393DF2262DB20C00337FAB /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC393DF1262DB20C00337FAB /* AnchorModel.swift */; };
 		BC4145A62633E67000C1D0F5 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4145A52633E67000C1D0F5 /* CollectionBaseCell.swift */; };
+		BC4145AC2633F35C00C1D0F5 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4145AB2633F35C00C1D0F5 /* RecommendCycleView.swift */; };
+		BC4145AF2633F3B500C1D0F5 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4145AE2633F3B500C1D0F5 /* RecommendCycleView.xib */; };
 		BC5A21252618E46D00103AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A21242618E46D00103AE3 /* AppDelegate.swift */; };
 		BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A21262618E46D00103AE3 /* SceneDelegate.swift */; };
 		BC5A212C2618E46D00103AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A212A2618E46D00103AE3 /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		BC393DEE262DACA700337FAB /* AncharGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncharGroup.swift; sourceTree = "<group>"; };
 		BC393DF1262DB20C00337FAB /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		BC4145A52633E67000C1D0F5 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
+		BC4145AB2633F35C00C1D0F5 /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
+		BC4145AE2633F3B500C1D0F5 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		BC5A21212618E46D00103AE3 /* qqhrLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qqhrLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5A21242618E46D00103AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5A21262618E46D00103AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			children = (
 				BC393D9D262BCF8100337FAB /* CollectionHeaderView.swift */,
 				BC393D9E262BCF8100337FAB /* CollectionHeaderView.xib */,
+				BC4145AB2633F35C00C1D0F5 /* RecommendCycleView.swift */,
+				BC4145AE2633F3B500C1D0F5 /* RecommendCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				BC5A212C2618E46D00103AE3 /* Main.storyboard in Resources */,
 				BC5A21502618F05000103AE3 /* Live.storyboard in Resources */,
 				BC5A214D2618F02300103AE3 /* Home.storyboard in Resources */,
+				BC4145AF2633F3B500C1D0F5 /* RecommendCycleView.xib in Resources */,
 				BC393DB0262BE69A00337FAB /* CollectionPrettyCell.xib in Resources */,
 				BC5A21572618F08100103AE3 /* Profile.storyboard in Resources */,
 				BC5A21542618F06E00103AE3 /* Follow.storyboard in Resources */,
@@ -470,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4145AC2633F35C00C1D0F5 /* RecommendCycleView.swift in Sources */,
 				BC5A21252618E46D00103AE3 /* AppDelegate.swift in Sources */,
 				BC393D9F262BCF8100337FAB /* CollectionHeaderView.swift in Sources */,
 				BC3724FA261CB146003CD519 /* UIColor-Extension.swift in Sources */,
