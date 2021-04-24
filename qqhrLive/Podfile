@@ -5,6 +5,7 @@ use_frameworks!
 target 'qqhrLive' do
 
 pod 'Alamofire'
+pod 'Kingfisher'
 
 
 end

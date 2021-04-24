@@ -24,6 +24,7 @@
 		BC393DEC262DA7F400337FAB /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC393DEB262DA7F400337FAB /* NSDate-Extension.swift */; };
 		BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC393DEE262DACA700337FAB /* AncharGroup.swift */; };
 		BC393DF2262DB20C00337FAB /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC393DF1262DB20C00337FAB /* AnchorModel.swift */; };
+		BC4145A62633E67000C1D0F5 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4145A52633E67000C1D0F5 /* CollectionBaseCell.swift */; };
 		BC5A21252618E46D00103AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A21242618E46D00103AE3 /* AppDelegate.swift */; };
 		BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A21262618E46D00103AE3 /* SceneDelegate.swift */; };
 		BC5A212C2618E46D00103AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A212A2618E46D00103AE3 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		BC393DEB262DA7F400337FAB /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		BC393DEE262DACA700337FAB /* AncharGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncharGroup.swift; sourceTree = "<group>"; };
 		BC393DF1262DB20C00337FAB /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		BC4145A52633E67000C1D0F5 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		BC5A21212618E46D00103AE3 /* qqhrLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qqhrLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5A21242618E46D00103AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5A21262618E46D00103AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				BC393DA3262BDBEB00337FAB /* CollectionNormalCell.xib */,
 				BC393DAD262BE69A00337FAB /* CollectionPrettyCell.swift */,
 				BC393DAE262BE69A00337FAB /* CollectionPrettyCell.xib */,
+				BC4145A52633E67000C1D0F5 /* CollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				BC3724F3261C8CE6003CD519 /* Common.swift in Sources */,
 				BC393DAF262BE69A00337FAB /* CollectionPrettyCell.swift in Sources */,
 				BC393DEC262DA7F400337FAB /* NSDate-Extension.swift in Sources */,
+				BC4145A62633E67000C1D0F5 /* CollectionBaseCell.swift in Sources */,
 				BC393DA4262BDBEB00337FAB /* CollectionNormalCell.swift in Sources */,
 				BC393DE0262C347600337FAB /* NetworkTools.swift in Sources */,
 				BC5A216D261A146500103AE3 /* HomeViewController.swift in Sources */,

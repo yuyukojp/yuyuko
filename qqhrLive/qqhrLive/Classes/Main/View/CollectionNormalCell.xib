@@ -45,7 +45,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMz-75-Eyd">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMz-75-Eyd">
                         <rect key="frame" x="130" y="167.5" width="62" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="13亿在线" image="Image_online"/>
@@ -72,6 +72,12 @@
                 <constraint firstItem="bbf-AB-AyV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zDv-Yb-O71"/>
             </constraints>
             <size key="customSize" width="197" height="221"/>
+            <connections>
+                <outlet property="iconImageView" destination="bbf-AB-AyV" id="CBY-Hg-AIZ"/>
+                <outlet property="nickNameLabel" destination="N2o-sY-yH2" id="1UD-NM-OK4"/>
+                <outlet property="onlineBtn" destination="kMz-75-Eyd" id="f4h-7c-ywL"/>
+                <outlet property="roomNameLabel" destination="wj2-FL-ltk" id="ySk-OT-NDS"/>
+            </connections>
             <point key="canvasLocation" x="-155.79710144927537" y="-20.424107142857142"/>
         </collectionViewCell>
     </objects>

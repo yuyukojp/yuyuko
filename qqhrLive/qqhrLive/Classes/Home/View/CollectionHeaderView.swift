@@ -13,7 +13,7 @@ class CollectionHeaderView: UICollectionReusableView {
     @IBOutlet weak var titleLabel: UILabel!
    
     @IBOutlet weak var iconImageVIew: UIImageView!
-    //@IBOutlet weak var ionImageView: UIImageView!
+    
 
     
     //MARK:定义模型属性
