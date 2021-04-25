@@ -29,7 +29,8 @@ class RecommendCycleView: UIView {
         //设置不随着父控件拉伸
         //autoresizingMask = .None
         //注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellID)
+    
+        collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
 
     }
     
@@ -58,13 +59,22 @@ extension RecommendCycleView : UICollectionViewDataSource {
         return cycleModels?.count ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! CollectionCycleCell
         
-        let cycleModel = cycleModels![indexPath.item]
+        cell.cycleModel = cycleModels![indexPath.item]
         
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.yellow : UIColor.blue
+        //cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.yellow : UIColor.blue
         return cell
     }
     
+}
 
+//MARK:遵守UICollectionView的代理协议
+extension RecommendCycleView : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //1.获取滚动片月亮
+        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
+        //2.计算page
+        pageControl.currentPage = Int(offsetX / scrollView.bounds.width)
+    }
 }
