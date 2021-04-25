@@ -134,6 +134,7 @@ extension RecommendViewController : UICollectionViewDataSource, UICollectionView
         //取出section的HeaderView
         let headerVIew = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
         //取出模型数据
+        
         headerVIew.group = recommendVM.anchorGroups[indexPath.section]
         
        

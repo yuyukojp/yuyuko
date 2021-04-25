@@ -20,7 +20,7 @@ class CollectionPrettyCell: CollectionBaseCell {
             //将属性传递给父类
             super.anchor = anchor
             //3.显示城市
-            cityBtn.setTitle(anchor?.anchor_city, for: .normal)
+            cityBtn.setTitle(anchor?.anchor_city, for: UIControl.State())
 
         }
     }
