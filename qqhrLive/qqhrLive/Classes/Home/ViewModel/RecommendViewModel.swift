@@ -9,7 +9,7 @@ import UIKit
 
 class RecommendViewModel /*: BaseViewModel*/ {
     // MARK:- 懒加载属性
- //   lazy var cycleModels : [CycleModel] = [CycleModel]()
+    lazy var cycleModels : [CycleModel] = [CycleModel]()
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup] ()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
@@ -104,8 +104,9 @@ extension RecommendViewModel {
             
             // 3.字典转模型对象
             for dict in dataArray {
-               // self.cycleModels.append(CycleModel(dict: dict))
+                self.cycleModels.append(CycleModel(dict: dict))
             }
+        
             
             finishCallback()
         }
