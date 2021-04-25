@@ -50,12 +50,12 @@ class RecommendViewController: UIViewController {
         
         return collectionView
     }()
-    /* //轮播图
+     //轮播图
     private lazy var cycleView : RecommendCycleView = {
-                let cycleView = RecommendCycleView.recommendCycleView()
+        let cycleView = RecommendCycleView.recommendCycleView()
         cycleView.frame = CGRect(x: 0, y: -kCycelViewH, width: kScreenW, height: kCycelViewH)
         return cycleView
-    }()*/
+    }()
     
     //系统回吊函数
     override func viewDidLoad() {
@@ -77,7 +77,9 @@ extension RecommendViewController {
         //1.将UICollctiomview添加到控制器的VIew中
         view.addSubview(collectionView)
         //2. 将cycleView添加到UICollectionView中
-       // collectionView.addSubview(cycleView)
+        collectionView.addSubview(cycleView)
+        //3. 设置collctionVIew的那边句
+        collectionView.contentInset = UIEdgeInsets(top: kCycelViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -134,6 +136,7 @@ extension RecommendViewController : UICollectionViewDataSource, UICollectionView
         //取出section的HeaderView
         let headerVIew = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
         //取出模型数据
+        
         headerVIew.group = recommendVM.anchorGroups[indexPath.section]
         
        
