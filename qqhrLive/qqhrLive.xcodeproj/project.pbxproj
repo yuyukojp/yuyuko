@@ -41,6 +41,7 @@
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
+		C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */; };
 		C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E52882634FFF50055E9B5 /* BaseGameModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
+		C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C19E52882634FFF50055E9B5 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		C4DB69C104D24398844DB248 /* Pods-qqhrLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqhrLive.debug.xcconfig"; path = "Target Support Files/Pods-qqhrLive/Pods-qqhrLive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +223,7 @@
 		BC5A21412618E9AB00103AE3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C190BE1A2636A2C700D1EE89 /* ViewModle */,
 				BC5A2160261A126F00103AE3 /* Model */,
 				BC5A2161261A126F00103AE3 /* View */,
 				BC5A215F261A126F00103AE3 /* Controller */,
@@ -367,6 +370,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		C190BE1A2636A2C700D1EE89 /* ViewModle */ = {
+			isa = PBXGroup;
+			children = (
+				C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */,
+			);
+			path = ViewModle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -504,6 +515,7 @@
 				BC5A2173261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift in Sources */,
 				BC3724F3261C8CE6003CD519 /* Common.swift in Sources */,
 				BC393DAF262BE69A00337FAB /* CollectionPrettyCell.swift in Sources */,
+				C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */,
 				BC393DEC262DA7F400337FAB /* NSDate-Extension.swift in Sources */,
 				BC4145A62633E67000C1D0F5 /* CollectionBaseCell.swift in Sources */,
 				BC393DA4262BDBEB00337FAB /* CollectionNormalCell.swift in Sources */,

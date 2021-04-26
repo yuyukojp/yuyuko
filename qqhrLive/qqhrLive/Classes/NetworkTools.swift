@@ -32,6 +32,7 @@ class NetworkTools {
             }
             
             // 4.将结果回调出去
+           
             finishedCallback(result)
         }
     }

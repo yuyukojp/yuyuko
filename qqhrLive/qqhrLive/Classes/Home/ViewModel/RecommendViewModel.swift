@@ -7,10 +7,10 @@
 
 import UIKit
 
-class RecommendViewModel /*: BaseViewModel*/ {
+class RecommendViewModel : BaseViewModel {
     // MARK:- 懒加载属性
     lazy var cycleModels : [CycleModel] = [CycleModel]()
-    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup] ()
+    //lazy var anchorGroups : [AnchorGroup] = [AnchorGroup] ()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
 }
@@ -29,25 +29,33 @@ extension RecommendViewModel {
         // 3.请求第一部分推荐数据
         dGroup.enter()
         NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time" :   NSDate.getCurrentTime()]) { (result) in
-            
+           
             // 1.将result转成字典类型
             guard let resultDict = result as? [String : NSObject] else { return }
-            
+           
             // 2.根据data该key,获取数组
             guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
-            
+           
             // 3.遍历字典,并且转成模型对象
             // 3.1.设置组的属性
             self.bigDataGroup.tag_name = "热门"
             self.bigDataGroup.icon_name = "home_header_hot"
-            
-            // 3.2.获取主播数据
+   
+            // 3.2.获取每个主播的数据
             for dict in dataArray {
+                print(dict)
+                print("--------------------------")
+                //MARK: Problem
                 let anchor = AnchorModel(dict: dict)
+                print(anchor.online)
+                print("*******************")
                 self.bigDataGroup.anchors.append(anchor)
+
+   
             }
             
             // 3.3.离开组
+            
             dGroup.leave()
         }
         
@@ -66,8 +74,11 @@ extension RecommendViewModel {
             self.prettyGroup.icon_name = "home_header_phone"
             
             // 3.2.获取主播数据
+
             for dict in dataArray {
+                
                 let anchor = AnchorModel(dict: dict)
+
                 self.prettyGroup.anchors.append(anchor)
             }
             

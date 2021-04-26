@@ -12,7 +12,7 @@ extension NSDate {
     class func getCurrentTime() -> String {
         let nowDate = NSDate()
         let interval = Int(nowDate.timeIntervalSince1970)
-        
+       // print(interval)
         return "\(interval)"
     }
 }
