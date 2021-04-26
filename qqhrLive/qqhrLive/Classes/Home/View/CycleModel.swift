@@ -26,6 +26,8 @@ class CycleModel: NSObject {
     init(dict : [String : NSObject]) {
         super.init()
         setValuesForKeys(dict)
+        
+        //print(title)
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 }

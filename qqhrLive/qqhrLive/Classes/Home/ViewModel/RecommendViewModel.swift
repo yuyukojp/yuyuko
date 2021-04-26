@@ -46,8 +46,8 @@ extension RecommendViewModel {
                 //print("--------------------------")
                 //MARK: Problemi isOK
                 let anchor = AnchorModel(dict: dict)
-                print(anchor.online)
-                print("*******************")
+               // print(anchor.online)
+               // print("*******************")
                 self.bigDataGroup.anchors.append(anchor)
 
    
@@ -114,7 +114,9 @@ extension RecommendViewModel {
             
             // 3.字典转模型对象
             for dict in dataArray {
+               
                 self.cycleModels.append(CycleModel(dict: dict))
+                //print(self.cycleModels.count)
             }
         
             
