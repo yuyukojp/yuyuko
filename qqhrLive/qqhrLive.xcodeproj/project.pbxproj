@@ -38,6 +38,8 @@
 		BC5A21572618F08100103AE3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A21562618F08100103AE3 /* Profile.storyboard */; };
 		BC5A216D261A146500103AE3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A216C261A146500103AE3 /* HomeViewController.swift */; };
 		BC5A2173261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A2172261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift */; };
+		BC84008926371B67007AEAF4 /* RecommenGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC84008826371B67007AEAF4 /* RecommenGameView.swift */; };
+		BC84008C26371B7F007AEAF4 /* RecommenGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC84008B26371B7F007AEAF4 /* RecommenGameView.xib */; };
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
@@ -80,6 +82,8 @@
 		BC5A21562618F08100103AE3 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		BC5A216C261A146500103AE3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC5A2172261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		BC84008826371B67007AEAF4 /* RecommenGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommenGameView.swift; sourceTree = "<group>"; };
+		BC84008B26371B7F007AEAF4 /* RecommenGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommenGameView.xib; sourceTree = "<group>"; };
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				BC4145AE2633F3B500C1D0F5 /* RecommendCycleView.xib */,
 				BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */,
 				BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */,
+				BC84008826371B67007AEAF4 /* RecommenGameView.swift */,
+				BC84008B26371B7F007AEAF4 /* RecommenGameView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 			files = (
 				BC5A21312618E46D00103AE3 /* LaunchScreen.storyboard in Resources */,
 				BC393DA0262BCF8100337FAB /* CollectionHeaderView.xib in Resources */,
+				BC84008C26371B7F007AEAF4 /* RecommenGameView.xib in Resources */,
 				BC393DA5262BDBEB00337FAB /* CollectionNormalCell.xib in Resources */,
 				BC5A212E2618E46D00103AE3 /* Assets.xcassets in Resources */,
 				BC5A212C2618E46D00103AE3 /* Main.storyboard in Resources */,
@@ -513,6 +520,7 @@
 				BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */,
 				BC3724F7261CAE29003CD519 /* PageContentView.swift in Sources */,
 				BC5A2173261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift in Sources */,
+				BC84008926371B67007AEAF4 /* RecommenGameView.swift in Sources */,
 				BC3724F3261C8CE6003CD519 /* Common.swift in Sources */,
 				BC393DAF262BE69A00337FAB /* CollectionPrettyCell.swift in Sources */,
 				C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */,
