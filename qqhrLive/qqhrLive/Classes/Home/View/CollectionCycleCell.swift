@@ -22,7 +22,7 @@ class CollectionCycleCell: UICollectionViewCell {
         didSet {
             //titleLabel.text = cycleModel?.title
             let iconURL = NSURL(string: cycleModel?.pic_url ?? "")!
-            //iconImageView.kf.setImage(with: URL.init(string: urlsansan ))
+            //iconImageView.kf.setImage(with: iconURL)
             
         }
     }

@@ -9,9 +9,9 @@ import UIKit
 
 class CycleModel: NSObject {
     //1. 标题
-    var title : String = ""
+    @objc var title : String = ""
     //2. 图片地址
-    var pic_url : String = ""
+    @objc var pic_url : String = ""
     //3.主播对应的字典
     var room : [String : NSObject]? {
         didSet {
