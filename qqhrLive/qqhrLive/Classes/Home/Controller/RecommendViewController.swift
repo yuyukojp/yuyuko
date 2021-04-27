@@ -57,8 +57,8 @@ class RecommendViewController: UIViewController {
         cycleView.frame = CGRect(x: 0, y: -(kCycelViewH + kGameViewH), width: kScreenW, height: kCycelViewH)
         return cycleView
     }()
-    private lazy var gimeView : RecommenGameView = {
-        let gameView = RecommenGameView.recommendGameView()
+    private lazy var gimeView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
         gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
         return gameView
     }()
@@ -97,6 +97,8 @@ extension RecommendViewController {
         //1. 请求推荐数据
         recommendVM.requestData{
             self.collectionView.reloadData()
+            //将数据传递给gameview
+           // self.gameView.groups = self.recommendVM.anchorGroups
         }
         //2. 请求轮播数据
         recommendVM.requestCycleData {

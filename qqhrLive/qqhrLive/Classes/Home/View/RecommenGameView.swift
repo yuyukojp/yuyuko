@@ -4,41 +4,6 @@
 //
 //  Created by 金斗石 on 2021/4/27.
 //
-/*
-import UIKit
-private let kGameCellID = "kGameCellID"
-
-class RecommenGameView: UIView {
-    //控件属性
-    @IBOutlet weak var collectionView: UICollectionView!
-    //系统会掉
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-        //注册cel
-       collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
-    }
- 
-}
-
-//MARK:提供快速创建的泪方法
-extension RecommenGameView {
-    class func recommendGameView() -> RecommenGameView {
-        return Bundle.main.loadNibNamed("RecommenGameView", owner: nil, options: nil)?.first as! RecommenGameView
-    }
-}
-
-//MARK 准手uicolleton
-
-extension RecommenGameView : UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: <#T##String#>, for: <#T##IndexPath#>)
-    }
-}
-*/
 
 import UIKit
 
@@ -89,7 +54,7 @@ extension RecommendGameView : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) //as! CollectionGameCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
         
         cell.baseGame = groups![(indexPath as NSIndexPath).item]
         
