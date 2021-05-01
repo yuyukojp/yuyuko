@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		445713CE81313A700A15F0CF /* Pods_qqhrLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */; };
+		BC0B5208263D15B900F41859 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B5206263D15B900F41859 /* CollectionGameCell.swift */; };
+		BC0B5209263D15B900F41859 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0B5207263D15B900F41859 /* CollectionGameCell.xib */; };
 		BC21F5E92629BCE200E4A824 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21F5E82629BCE200E4A824 /* RecommendViewController.swift */; };
 		BC3724F0261C8A42003CD519 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3724EF261C8A42003CD519 /* PageTitleView.swift */; };
 		BC3724F3261C8CE6003CD519 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3724F2261C8CE6003CD519 /* Common.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qqhrLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF708FB4715A11213FAD4FFF /* Pods-qqhrLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqhrLive.release.xcconfig"; path = "Target Support Files/Pods-qqhrLive/Pods-qqhrLive.release.xcconfig"; sourceTree = "<group>"; };
+		BC0B5206263D15B900F41859 /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
+		BC0B5207263D15B900F41859 /* CollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
 		BC21F5E82629BCE200E4A824 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		BC3724EF261C8A42003CD519 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		BC3724F2261C8CE6003CD519 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */,
 				BC490555263CF88600C70BAD /* RecommendGameView.swift */,
 				BC490558263CF89100C70BAD /* RecommendGameView.xib */,
+				BC0B5206263D15B900F41859 /* CollectionGameCell.swift */,
+				BC0B5207263D15B900F41859 /* CollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				BC5A212C2618E46D00103AE3 /* Main.storyboard in Resources */,
 				BC5A21502618F05000103AE3 /* Live.storyboard in Resources */,
 				BC5A214D2618F02300103AE3 /* Home.storyboard in Resources */,
+				BC0B5209263D15B900F41859 /* CollectionGameCell.xib in Resources */,
 				BC4145AF2633F3B500C1D0F5 /* RecommendCycleView.xib in Resources */,
 				BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */,
 				BC393DB0262BE69A00337FAB /* CollectionPrettyCell.xib in Resources */,
@@ -521,6 +528,7 @@
 				BC3724F7261CAE29003CD519 /* PageContentView.swift in Sources */,
 				BC5A2173261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift in Sources */,
 				BC3724F3261C8CE6003CD519 /* Common.swift in Sources */,
+				BC0B5208263D15B900F41859 /* CollectionGameCell.swift in Sources */,
 				BC393DAF262BE69A00337FAB /* CollectionPrettyCell.swift in Sources */,
 				C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */,
 				BC393DEC262DA7F400337FAB /* NSDate-Extension.swift in Sources */,

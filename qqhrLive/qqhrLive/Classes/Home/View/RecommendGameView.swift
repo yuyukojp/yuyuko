@@ -10,6 +10,21 @@ import UIKit
 private let kGameCellID = "kGameCellID"
 
 class RecommendGameView: UIView {
+    //定义数据属性
+    var groups : [AnchorGroup]? {
+        didSet {
+            //不显示前两个数据
+            groups?.removeFirst()
+            groups?.removeFirst()
+            
+            //添加一个更多组
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多学习"
+            groups?.append(moreGroup)
+            //刷新表哥
+            collectionView.reloadData()
+        }
+    }
     //MARK：控件属性
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -17,7 +32,8 @@ class RecommendGameView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         //注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kGameCellID)
+        collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
+        //collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kGameCellID)
         
     }
   
@@ -33,12 +49,14 @@ extension RecommendGameView {
 //MARK： 遵守UICollectionView
 extension RecommendGameView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return groups?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
+        cell.group = groups![indexPath.item]
+        
+        
         return cell
     }
     
