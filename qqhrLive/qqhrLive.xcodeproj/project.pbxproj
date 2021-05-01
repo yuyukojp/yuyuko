@@ -10,6 +10,7 @@
 		445713CE81313A700A15F0CF /* Pods_qqhrLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */; };
 		BC0B5208263D15B900F41859 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B5206263D15B900F41859 /* CollectionGameCell.swift */; };
 		BC0B5209263D15B900F41859 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0B5207263D15B900F41859 /* CollectionGameCell.xib */; };
+		BC0B522E263D5E8800F41859 /* AVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B522D263D5E8800F41859 /* AVView.swift */; };
 		BC21F5E92629BCE200E4A824 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21F5E82629BCE200E4A824 /* RecommendViewController.swift */; };
 		BC3724F0261C8A42003CD519 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3724EF261C8A42003CD519 /* PageTitleView.swift */; };
 		BC3724F3261C8CE6003CD519 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3724F2261C8CE6003CD519 /* Common.swift */; };
@@ -54,6 +55,7 @@
 		AF708FB4715A11213FAD4FFF /* Pods-qqhrLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqhrLive.release.xcconfig"; path = "Target Support Files/Pods-qqhrLive/Pods-qqhrLive.release.xcconfig"; sourceTree = "<group>"; };
 		BC0B5206263D15B900F41859 /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
 		BC0B5207263D15B900F41859 /* CollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
+		BC0B522D263D5E8800F41859 /* AVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVView.swift; sourceTree = "<group>"; };
 		BC21F5E82629BCE200E4A824 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		BC3724EF261C8A42003CD519 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		BC3724F2261C8CE6003CD519 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				BC393DAD262BE69A00337FAB /* CollectionPrettyCell.swift */,
 				BC393DAE262BE69A00337FAB /* CollectionPrettyCell.xib */,
 				BC4145A52633E67000C1D0F5 /* CollectionBaseCell.swift */,
+				BC0B522D263D5E8800F41859 /* AVView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */,
 				BC21F5E92629BCE200E4A824 /* RecommendViewController.swift in Sources */,
 				BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */,
+				BC0B522E263D5E8800F41859 /* AVView.swift in Sources */,
 				BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */,
 				BC3724F0261C8A42003CD519 /* PageTitleView.swift in Sources */,
 				BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */,
