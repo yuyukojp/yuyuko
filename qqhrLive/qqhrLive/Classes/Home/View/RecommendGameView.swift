@@ -8,6 +8,8 @@
 import UIKit
 
 private let kGameCellID = "kGameCellID"
+//那边句
+private let kEdgeInsetMargin : CGFloat = 10
 
 class RecommendGameView: UIView {
     //定义数据属性
@@ -33,6 +35,8 @@ class RecommendGameView: UIView {
         super.awakeFromNib()
         //注册cell
         collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
+        //添加一个那边句
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: kEdgeInsetMargin, bottom: 0, right: kEdgeInsetMargin)
         //collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kGameCellID)
         
     }
