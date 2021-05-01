@@ -14,6 +14,7 @@ private let kPrettyItemH = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 
 private let kCycelViewH = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -53,8 +54,14 @@ class RecommendViewController: UIViewController {
      //轮播图
     private lazy var cycleView : RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycelViewH, width: kScreenW, height: kCycelViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycelViewH + kGameViewH), width: kScreenW, height: kCycelViewH)
         return cycleView
+    }()
+    //创建下面的播放的那个VIew
+    private lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
     
     //系统回吊函数
@@ -78,8 +85,10 @@ extension RecommendViewController {
         view.addSubview(collectionView)
         //2. 将cycleView添加到UICollectionView中
         collectionView.addSubview(cycleView)
+        //2.5 将game加入
+        collectionView.addSubview(gameView)
         //3. 设置collctionVIew的那边句
-        collectionView.contentInset = UIEdgeInsets(top: kCycelViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycelViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
