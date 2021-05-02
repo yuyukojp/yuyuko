@@ -13,7 +13,7 @@ private let kEdgeInsetMargin : CGFloat = 10
 
 class RecommendGameView: UIView {
     //定义数据属性
-    var groups : [AnchorGroup]? {
+    var groups : [BaseGameModel]? {
         didSet {
             //不显示前两个数据
             groups?.removeFirst()

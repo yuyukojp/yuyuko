@@ -99,7 +99,17 @@ extension RecommendViewController {
         recommendVM.requestData{
             //1. 展示推荐数据
             self.collectionView.reloadData()
-            //将数据传递给GameView
+            //2.将数据传递给GameView
+            var groups = self.recommendVM.anchorGroups
+            //不显示前两个数据
+            groups.removeFirst()
+            groups.removeFirst()
+            
+            //添加一个更多组
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多学习"
+            groups.append(moreGroup)
+
             self.gameView.groups = self.recommendVM.anchorGroups
         }
         //2. 请求轮播数据

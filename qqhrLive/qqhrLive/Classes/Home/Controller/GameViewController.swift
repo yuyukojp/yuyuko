@@ -51,7 +51,7 @@ class GameViewController: UIViewController {
         let headerView = CollectionHeaderView.collectionHeaderView()
         headerView.frame = CGRect(x: 0, y: -(kHeaderViewH + kGameViewH), width: kScreenW, height: kHeaderViewH)
         headerView.iconImageVIew.image = UIImage(named: "Img_orange")
-        headerView.titleLabel.text = "学霸成功案例"
+        headerView.titleLabel.text = "推荐类"
         headerView.More_Btn.isHidden = true
         return headerView
     }()
@@ -97,8 +97,12 @@ extension GameViewController {
     fileprivate func loadData() {
         
         gameVM.loadAllGameData {
+            //1.展示全部内容
             self.collectionView.reloadData()
 
+            //1.展示推荐
+
+            self.gameView.groups = Array(self.gameVM.games[0..<10])
         }
      }
 }
