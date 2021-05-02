@@ -59,6 +59,7 @@
                 <constraint firstItem="l3b-lo-0gt" firstAttribute="top" secondItem="Rha-Ek-KHm" secondAttribute="bottom" constant="5" id="zjk-2m-Cw1"/>
             </constraints>
             <connections>
+                <outlet property="More_Btn" destination="l3b-lo-0gt" id="cuC-kB-3jo"/>
                 <outlet property="iconImageVIew" destination="HDb-ox-u2S" id="Vcp-8R-kgZ"/>
                 <outlet property="titleLabel" destination="yL7-bw-3Hh" id="iK8-fI-sNV"/>
             </connections>

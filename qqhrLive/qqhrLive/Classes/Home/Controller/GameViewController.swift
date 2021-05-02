@@ -10,8 +10,10 @@ import UIKit
 private let kEdgeMargin : CGFloat = 10
 private let kItemW: CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
 private let kItemH: CGFloat = kItemW * 6 / 5
+private let kHeaderViewH : CGFloat = 50
 //注册ID
 private let kGameCellID = "kGameCellID"
+private let kHeaderViewID = "kHeaderViewID"
 
 class GameViewController: UIViewController {
 
@@ -26,15 +28,19 @@ class GameViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: kEdgeMargin, bottom: 0, right: kEdgeMargin)
+        //加载头
+        layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         //2.创建collectionview
-        //MARK: BBBBBBBADcollectionView
+
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         //注册cell
         collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         //设置数据源
         collectionView.dataSource = self
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        //collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.white
+
         
         return collectionView
         
@@ -46,6 +52,8 @@ class GameViewController: UIViewController {
 
         setupUI()
         loadData()
+        
+
 
            
     }
@@ -72,23 +80,34 @@ extension GameViewController {
 }
 
 
-//MARK: 遵守UICollectionView的数据源&代理协议
-extension GameViewController: UICollectionViewDataSource {
+
+// MARK:- 遵守UICollectionView的数据源&代理
+extension GameViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 60
-        //return gameVM.games.count
+        return gameVM.games.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //获取cell
+        // 1.获取cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
-        //MARK:-  BBBBBBBAD .70-71
-        //print(gameVM.games)
-        //let gameModel = gameVM.games[indexPath.item]
-       // print(gameModel.tag_name)
-        cell.backgroundColor = UIColor.randomColor()
-        //cell.baseGame = gameVM.games[indexPath.item]
+        
+        cell.baseGame = gameVM.games[indexPath.item]
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        // 1.取出HeaderView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        
+        // 2.给HeaderView设置属性
+        headerView.titleLabel.text = "全部"
+        headerView.iconImageVIew.image = UIImage(named: "Img_orange")
+        headerView.More_Btn.isHidden = true
+
+        
+        return headerView
+    }
 }
+
 
