@@ -11,6 +11,7 @@ private let kEdgeMargin : CGFloat = 10
 private let kItemW: CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
 private let kItemH: CGFloat = kItemW * 6 / 5
 private let kHeaderViewH : CGFloat = 50
+private let kGameViewH: CGFloat = 90
 //注册ID
 private let kGameCellID = "kGameCellID"
 private let kHeaderViewID = "kHeaderViewID"
@@ -45,6 +46,22 @@ class GameViewController: UIViewController {
         return collectionView
         
     }()
+    
+    fileprivate lazy var topHeaderView: CollectionHeaderView = {
+        let headerView = CollectionHeaderView.collectionHeaderView()
+        headerView.frame = CGRect(x: 0, y: -(kHeaderViewH + kGameViewH), width: kScreenW, height: kHeaderViewH)
+        headerView.iconImageVIew.image = UIImage(named: "Img_orange")
+        headerView.titleLabel.text = "学霸成功案例"
+        headerView.More_Btn.isHidden = true
+        return headerView
+    }()
+    
+    fileprivate lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
+    
     //MARK: 系统回吊
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +80,14 @@ class GameViewController: UIViewController {
 //MARK:- 设置UI界面
 extension GameViewController {
     fileprivate func setupUI() {
+        //1.添加collectionview
         view.addSubview(collectionView)
+        //2.添加顶部的headerview
+        collectionView.addSubview(topHeaderView)
+        //3.学霸view添加到collectionview
+        collectionView.addSubview(gameView)
+        //设置collectionview的那边句
+        collectionView.contentInset = UIEdgeInsets(top: kHeaderViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 //MARK:- 请求数据
