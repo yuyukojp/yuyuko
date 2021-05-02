@@ -13,7 +13,8 @@ class GameViewModel {
 }
 extension GameViewModel {
     func loadAllGameData(finishedCallback : @escaping () -> ()) {
-        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getColumnDetail", parameters: [ : ]) { (result) in
+        //MARK:- 数据太多 ;http://capi.douyucdn.cn/api/v1/getColumnDetail ; http://www.douyutv.com/api/v1/slide/6
+        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getColumnDetail",parameters: [ : ]) { (result) in
             //1.获取数据
             guard let resultDict = result as? [String: Any] else { return }
             //取出data

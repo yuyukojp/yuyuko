@@ -15,10 +15,10 @@ class CollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     //MARK: 定义属性
-    var group : AnchorGroup? {
+    var baseGame : BaseGameModel? {
         didSet {
-            titleLabel.text = group?.tag_name
-            let iconURL =  group?.icon_url ?? ""
+            titleLabel.text = baseGame?.tag_name
+            let iconURL =  baseGame?.icon_url ?? ""
             iconImageView.kf.setImage(with: URL.init(string: iconURL), placeholder: UIImage(named: "pull_loading_2_60x60_"))
         }
     }

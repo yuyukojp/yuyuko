@@ -91,7 +91,7 @@ extension RecommendViewModel {
         
         loadAnchorData(isGroupData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             dGroup.leave()
-        }
+        } 
         
         
         // 6.所有的数据都请求到,之后进行排序

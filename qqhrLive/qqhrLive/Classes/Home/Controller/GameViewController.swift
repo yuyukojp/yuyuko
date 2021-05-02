@@ -15,9 +15,10 @@ private let kGameCellID = "kGameCellID"
 
 class GameViewController: UIViewController {
 
-    //MARK：懒加载属性
-    //MARK: BBBBBBBAD
-    fileprivate lazy var gameVM: GameViewModel = GameViewModel()
+    //MARK:- 懒加载属性
+
+    fileprivate lazy var gameVM : GameViewModel = GameViewModel()
+    
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -32,6 +33,8 @@ class GameViewController: UIViewController {
         collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         //设置数据源
         collectionView.dataSource = self
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        //collectionView.backgroundColor = UIColor.white
         
         return collectionView
         
@@ -40,27 +43,32 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: BBBBBBBAD
+
         setupUI()
-        //loadData()
+        loadData()
+
            
     }
     
 }
 
-//MARK: 设置UI界面
+//MARK:- 设置UI界面
 extension GameViewController {
     fileprivate func setupUI() {
         view.addSubview(collectionView)
     }
 }
-//MARK: 请求数据
+//MARK:- 请求数据
 extension GameViewController {
+    
+
     fileprivate func loadData() {
+        
         gameVM.loadAllGameData {
             self.collectionView.reloadData()
+
         }
-    }
+     }
 }
 
 
@@ -68,14 +76,18 @@ extension GameViewController {
 extension GameViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 60
+        //return gameVM.games.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //获取cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
+        //MARK:-  BBBBBBBAD .70-71
+        //print(gameVM.games)
         //let gameModel = gameVM.games[indexPath.item]
-        //print(gameModel.tag_name)
+       // print(gameModel.tag_name)
         cell.backgroundColor = UIColor.randomColor()
+        //cell.baseGame = gameVM.games[indexPath.item]
+        
         return cell
     }
 }

@@ -7,6 +7,8 @@
 
 import UIKit
 
-class GameModel: BaseGameModel {
+class GameModel: BaseGameModel{
+
 
 }
+

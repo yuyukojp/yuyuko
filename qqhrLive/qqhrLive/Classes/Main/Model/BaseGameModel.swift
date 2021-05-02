@@ -18,8 +18,7 @@ class BaseGameModel: NSObject {
     }
     
     init(dict : [String : Any]) {
-        super.init()
-        
+        super.init()        
         setValuesForKeys(dict)
     }
     
