@@ -61,7 +61,7 @@ class BaseAnchorViewController: UIViewController {
 
 //MARK:- 设置UI
 extension BaseAnchorViewController {
-    fileprivate func setupUI() {
+    @objc func setupUI() {
         view.addSubview(collectionView)
     }
 }
