@@ -49,6 +49,7 @@
 		BC5A216D261A146500103AE3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A216C261A146500103AE3 /* HomeViewController.swift */; };
 		BC5A2173261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A2172261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift */; };
 		BC6699D3263E4C0D000C7E8D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6699D2263E4C0D000C7E8D /* GameViewController.swift */; };
+		BC70BB3F26405AA300A30949 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */; };
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
@@ -102,6 +103,7 @@
 		BC5A216C261A146500103AE3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC5A2172261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		BC6699D2263E4C0D000C7E8D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				BC5A212A2618E46D00103AE3 /* Main.storyboard */,
 				BC24AEBE263EA4C500D095A3 /* BaseViewController.swift */,
+				BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				BC0B5208263D15B900F41859 /* CollectionGameCell.swift in Sources */,
 				BC393DAF262BE69A00337FAB /* CollectionPrettyCell.swift in Sources */,
 				C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */,
+				BC70BB3F26405AA300A30949 /* BaseAnchorViewController.swift in Sources */,
 				BC393DEC262DA7F400337FAB /* NSDate-Extension.swift in Sources */,
 				BC24AEC3263F2C0E00D095A3 /* AmuseViewModel.swift in Sources */,
 				BC4145A62633E67000C1D0F5 /* CollectionBaseCell.swift in Sources */,

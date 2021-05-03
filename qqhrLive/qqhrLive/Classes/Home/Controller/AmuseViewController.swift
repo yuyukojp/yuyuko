@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/*
 private let kItemMargin : CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kItemW * 3 / 4
@@ -16,11 +16,11 @@ private let kHeaderViewH : CGFloat = 50
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
-
-class AmuseViewController: UIViewController {
+*/
+class AmuseViewController: BaseAnchorViewController {
     //MARK:- 懒加载
     fileprivate lazy var amuseVM: AmuseViewModel = AmuseViewModel()
-    fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
+   /* fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         //1. 创建布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
@@ -47,31 +47,36 @@ class AmuseViewController: UIViewController {
         
         return collectionView
     }()
-    
+    */
     //MARK:- 系统毁掉
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        loadData()
+      //  setupUI()
+       // loadData()
     }
 }
-
+/*
 //MARK:- 设置UI
 extension AmuseViewController {
     fileprivate func setupUI() {
         view.addSubview(collectionView)
     }
 }
+ */
 //MARK:- 请求数据
 extension AmuseViewController {
-    fileprivate func loadData() {
+    override func loadData() {
+        //1. 给viewmodel复制
+        baseVM = amuseVM
+        //2. 请求数据
+        
         amuseVM.loadAmuseData {
             self.collectionView.reloadData()
         }
     }
 }
-
+/*
 //MARK:- 遵守uivollcetiom的协议
 
 extension AmuseViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -99,3 +104,4 @@ extension AmuseViewController: UICollectionViewDataSource, UICollectionViewDeleg
         
     }
 }
+*/

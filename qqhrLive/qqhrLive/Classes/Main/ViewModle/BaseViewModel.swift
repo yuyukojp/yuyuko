@@ -13,7 +13,7 @@ class BaseViewModel {
 
 
 extension BaseViewModel {
-    func loadAnchorData(isGroupData : Bool, URLString : String, parameters : [String : Any]? = nil, finishedCallback : @escaping () -> ()) {
+    func loadAnchorData(/*isGroupData : Bool, */URLString : String, parameters : [String : Any]? = nil, finishedCallback : @escaping () -> ()) {
         NetworkTools.requestData(.get, URLString: URLString, parameters: parameters) { (result) in
             // 1.对界面进行处理
             guard let resultDict = result as? [String : Any] else { return }
@@ -21,7 +21,7 @@ extension BaseViewModel {
             
             
             // 2.判断是否分组数据
-            if isGroupData {
+           /* if isGroupData {
                 // 2.1.遍历数组中的字典
                 for dict in dataArray {
                     self.anchorGroups.append(AnchorGroup(dict: dict))
@@ -40,7 +40,20 @@ extension BaseViewModel {
             }
             
             // 3.完成回调
+ */
+            NetworkTools.requestData(.get, URLString: URLString) { (result) in
+                 //1.对结果进行处理
+                 guard let resultDict = result as? [String: Any] else { return }
+                 guard let dataArray = resultDict["data"] as? [[String: Any]] else { return }
+                 //2.遍历字典
+                 for dict in dataArray {
+                     self.anchorGroups.append(AnchorGroup(dict: dict))
+                 }
+            
             finishedCallback()
+            
+            }
+            
         }
     }
 }
