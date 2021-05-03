@@ -8,13 +8,13 @@
 import UIKit
 
 private let kItemMargin : CGFloat = 10
-private let kItemW = (kScreenW - 3 * kItemMargin) / 2
-private let kNormalItemH = kItemW * 3 / 4
-private let kPrettyItemH = kItemW * 4 / 3
+let kNormalItemH = kNormalItemW * 3 / 4
+let kPrettyItemH = kNormalItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
+let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 
 private let kNormalCellID = "kNormalCellID"
-private let kPrettyCellID = "kPrettyCellID"
+let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
 class BaseAnchorViewController: UIViewController {
@@ -24,7 +24,7 @@ class BaseAnchorViewController: UIViewController {
     lazy var collectionView : UICollectionView = { [unowned self] in
          //1. 创建布局
          let layout = UICollectionViewFlowLayout()
-         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
+         layout.itemSize = CGSize(width: kNormalItemW, height: kNormalItemH)
          layout.minimumLineSpacing = 0
          layout.minimumInteritemSpacing = kItemMargin
          layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)

@@ -7,18 +7,10 @@
 
 import UIKit
 
-private let kItemMargin : CGFloat = 10
-private let kItemW = (kScreenW - 3 * kItemMargin) / 2
-private let kNormalItemH = kItemW * 3 / 4
-private let kPrettyItemH = kItemW * 4 / 3
-private let kHeaderViewH : CGFloat = 50
 
 private let kCycelViewH = kScreenW * 3 / 8
 private let kGameViewH : CGFloat = 90
 
-private let kNormalCellID = "kNormalCellID"
-private let kPrettyCellID = "kPrettyCellID"
-private let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: BaseAnchorViewController {
 
@@ -83,5 +75,28 @@ extension RecommendViewController {
             self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
         
+    }
+}
+
+//MARK:- 修改中间cell的大小
+extension RecommendViewController: UICollectionViewDelegateFlowLayout {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == 1 {
+            //取出prattucell
+            let prettyCell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
+            //设置数据
+            prettyCell.anchor = recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+            
+           return prettyCell
+        }   else {
+            return super.collectionView(collectionView, cellForItemAt: indexPath)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(width: kNormalItemW, height: kPrettyItemH)
+        }
+        return CGSize(width: kNormalItemW, height: kNormalItemH)
     }
 }
