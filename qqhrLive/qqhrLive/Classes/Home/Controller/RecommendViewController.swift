@@ -69,6 +69,9 @@ extension RecommendViewController {
             groups.append(moreGroup)
 
             self.gameView.groups = self.recommendVM.anchorGroups
+            //数据请求完成隐藏loading动画
+            self.loadDataFinished()
+            
         }
         //2. 请求轮播数据
         recommendVM.requestCycleData {

@@ -31,6 +31,8 @@ extension FunneyViewController {
         //2. 请求数据
         funnyVM.loadFunnyData {
             self.collectionView.reloadData()
+            //3.数据请求完毕隐藏动画
+            self.loadDataFinished()
         }
     }
 }

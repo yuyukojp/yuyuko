@@ -16,8 +16,8 @@ class BaseViewController: UIViewController {
     fileprivate lazy var animImageView : UIImageView = { [unowned self] in
         let imageView = UIImageView(image: UIImage(named: "loading_1_280x158_"))
         imageView.center = self.view.center
-        imageView.animationImages = [UIImage(named : "loading_1_280x158_")!, UIImage(named : "loading_2_280x158_")!]
-        imageView.animationDuration = 0.5
+        imageView.animationImages = [UIImage(named: "loading_1_280x158_")!, UIImage(named: "loading_2_280x158_")!]
+        imageView.animationDuration = 0.3
         imageView.animationRepeatCount = LONG_MAX
         imageView.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin]
         return imageView
@@ -32,7 +32,7 @@ class BaseViewController: UIViewController {
 }
 
 extension BaseViewController {
-    func setupUI() {
+    @objc func setupUI() {
         // 1.隐藏内容的View
         contentView?.isHidden = true
         
@@ -46,7 +46,7 @@ extension BaseViewController {
         view.backgroundColor = UIColor(r: 250, g: 250, b: 250)
     }
     
-    func loadDataFinished() {
+    @objc func loadDataFinished() {
         // 1.停止动画
         animImageView.stopAnimating()
         

@@ -38,6 +38,8 @@ extension AmuseViewController {
         
         amuseVM.loadAmuseData {
             self.collectionView.reloadData()
+            //3.请求数据完成
+            self.loadDataFinished()
         }
     }
 }
