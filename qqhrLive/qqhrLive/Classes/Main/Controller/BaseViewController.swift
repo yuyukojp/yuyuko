@@ -14,9 +14,9 @@ class BaseViewController: UIViewController {
     
     // MARK: 懒加载属性
     fileprivate lazy var animImageView : UIImageView = { [unowned self] in
-        let imageView = UIImageView(image: UIImage(named: "img_loading_1"))
+        let imageView = UIImageView(image: UIImage(named: "loading_1_280x158_"))
         imageView.center = self.view.center
-        imageView.animationImages = [UIImage(named : "img_loading_1")!, UIImage(named : "img_loading_2")!]
+        imageView.animationImages = [UIImage(named : "loading_1_280x158_")!, UIImage(named : "loading_2_280x158_")!]
         imageView.animationDuration = 0.5
         imageView.animationRepeatCount = LONG_MAX
         imageView.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin]

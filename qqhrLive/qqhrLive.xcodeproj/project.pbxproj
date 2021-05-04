@@ -37,6 +37,8 @@
 		BC4145AF2633F3B500C1D0F5 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4145AE2633F3B500C1D0F5 /* RecommendCycleView.xib */; };
 		BC490556263CF88600C70BAD /* RecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC490555263CF88600C70BAD /* RecommendGameView.swift */; };
 		BC490559263CF89100C70BAD /* RecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC490558263CF89100C70BAD /* RecommendGameView.xib */; };
+		BC5799DA2641034000452F77 /* FunneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5799D92641034000452F77 /* FunneyViewController.swift */; };
+		BC5799DC264107E300452F77 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5799DB264107E300452F77 /* FunnyViewModel.swift */; };
 		BC5A21252618E46D00103AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A21242618E46D00103AE3 /* AppDelegate.swift */; };
 		BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A21262618E46D00103AE3 /* SceneDelegate.swift */; };
 		BC5A212C2618E46D00103AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A212A2618E46D00103AE3 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		BC5A2173261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A2172261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift */; };
 		BC6699D3263E4C0D000C7E8D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6699D2263E4C0D000C7E8D /* GameViewController.swift */; };
 		BC70BB3F26405AA300A30949 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */; };
+		BC70BB4126406B7D00A30949 /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70BB4026406B7D00A30949 /* AmuseMenuView.swift */; };
+		BC70BB4326406BAA00A30949 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */; };
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
@@ -89,6 +93,8 @@
 		BC4145AE2633F3B500C1D0F5 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		BC490555263CF88600C70BAD /* RecommendGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendGameView.swift; sourceTree = "<group>"; };
 		BC490558263CF89100C70BAD /* RecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendGameView.xib; sourceTree = "<group>"; };
+		BC5799D92641034000452F77 /* FunneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunneyViewController.swift; sourceTree = "<group>"; };
+		BC5799DB264107E300452F77 /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		BC5A21212618E46D00103AE3 /* qqhrLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qqhrLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5A21242618E46D00103AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5A21262618E46D00103AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 		BC5A2172261A1F2E00103AE3 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		BC6699D2263E4C0D000C7E8D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
+		BC70BB4026406B7D00A30949 /* AmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
+		BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 				BC393DE7262C38CC00337FAB /* RecommendViewModel.swift */,
 				BC24AEBA263E9B1F00D095A3 /* GameViewModel.swift */,
 				BC24AEC2263F2C0E00D095A3 /* AmuseViewModel.swift */,
+				BC5799DB264107E300452F77 /* FunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -270,6 +279,8 @@
 				BC490558263CF89100C70BAD /* RecommendGameView.xib */,
 				BC0B5206263D15B900F41859 /* CollectionGameCell.swift */,
 				BC0B5207263D15B900F41859 /* CollectionGameCell.xib */,
+				BC70BB4026406B7D00A30949 /* AmuseMenuView.swift */,
+				BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +293,7 @@
 				BC21F5E82629BCE200E4A824 /* RecommendViewController.swift */,
 				BC6699D2263E4C0D000C7E8D /* GameViewController.swift */,
 				BC24AEC0263F299C00D095A3 /* AmuseViewController.swift */,
+				BC5799D92641034000452F77 /* FunneyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -481,6 +493,7 @@
 				BC5A21502618F05000103AE3 /* Live.storyboard in Resources */,
 				BC5A214D2618F02300103AE3 /* Home.storyboard in Resources */,
 				BC0B5209263D15B900F41859 /* CollectionGameCell.xib in Resources */,
+				BC70BB4326406BAA00A30949 /* AmuseMenuView.xib in Resources */,
 				BC4145AF2633F3B500C1D0F5 /* RecommendCycleView.xib in Resources */,
 				BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */,
 				BC393DB0262BE69A00337FAB /* CollectionPrettyCell.xib in Resources */,
@@ -546,6 +559,7 @@
 				C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */,
 				BC24AEBF263EA4C500D095A3 /* BaseViewController.swift in Sources */,
 				BC21F5E92629BCE200E4A824 /* RecommendViewController.swift in Sources */,
+				BC70BB4126406B7D00A30949 /* AmuseMenuView.swift in Sources */,
 				BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */,
 				BC0B522E263D5E8800F41859 /* AVView.swift in Sources */,
 				BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */,
@@ -565,9 +579,11 @@
 				BC24AEC3263F2C0E00D095A3 /* AmuseViewModel.swift in Sources */,
 				BC4145A62633E67000C1D0F5 /* CollectionBaseCell.swift in Sources */,
 				BC24AEBB263E9B1F00D095A3 /* GameViewModel.swift in Sources */,
+				BC5799DA2641034000452F77 /* FunneyViewController.swift in Sources */,
 				BC490556263CF88600C70BAD /* RecommendGameView.swift in Sources */,
 				BC393DA4262BDBEB00337FAB /* CollectionNormalCell.swift in Sources */,
 				BC393DE0262C347600337FAB /* NetworkTools.swift in Sources */,
+				BC5799DC264107E300452F77 /* FunnyViewModel.swift in Sources */,
 				BC5A216D261A146500103AE3 /* HomeViewController.swift in Sources */,
 				BC393DE8262C38CC00337FAB /* RecommendViewModel.swift in Sources */,
 				BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */,

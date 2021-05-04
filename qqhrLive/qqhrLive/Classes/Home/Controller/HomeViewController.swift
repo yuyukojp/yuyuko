@@ -34,6 +34,8 @@ class HomeViewController: UIViewController {
         childVcs.append(RecommendViewController())
         childVcs.append(GameViewController())
         childVcs.append(AmuseViewController())
+        childVcs.append(FunneyViewController())
+        /*
         for _ in 0..<1 {
             let vc = UIViewController()
             //view北境颜色用随机数生成
@@ -41,6 +43,7 @@ class HomeViewController: UIViewController {
             
             childVcs.append(vc)
         }
+ */
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
         return contentView

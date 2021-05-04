@@ -89,7 +89,7 @@ extension RecommendViewModel {
         dGroup.enter()
         // http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1474252024
         
-        loadAnchorData(/*isGroupData: true, */URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
+        loadAnchorData(isGroupData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             dGroup.leave()
         } 
         
