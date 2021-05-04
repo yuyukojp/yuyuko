@@ -78,28 +78,20 @@ extension BaseAnchorViewController {
 
 //MARK:- 遵守uivollcetiom的协议
 
-extension BaseAnchorViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension BaseAnchorViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if baseVM == nil {
-            return 1
-        }
-        
+     
         return baseVM.anchorGroups.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if baseVM == nil {
-            return 20
-        }
+       
         
         return baseVM.anchorGroups[section].anchors.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //1.取出cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
-        if baseVM == nil {
-            return cell
-            
-        }
+       
         //2.给cell数据
         cell.anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         
@@ -108,13 +100,32 @@ extension BaseAnchorViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //1.取出headerview
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
-        if baseVM == nil {
-            return headerView
-        }
+       
         //2.给header设置数据
         headerView.group = baseVM.anchorGroups[indexPath.section]
         
         return headerView
+        
+    }
+}
+
+//MARK:- 遵守uicollectionview的代理协议
+extension BaseAnchorViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //1.取出主播信息
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        //2.判断是手机还是普通
+        anchor.isVertical == 0 ? pushNormalRoomVc(): presentShowRoomVc()
+    }
+    private func presentShowRoomVc() {
+        //1.创建showroomvx
+        let showRoomVc = RoomShowViewController()
+        //2.以model方式弹出
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    private func pushNormalRoomVc() {
+        let normalRoomVc = RoomNormalViewController()
+        navigationController?.pushViewController(normalRoomVc, animated: true)
         
     }
 }

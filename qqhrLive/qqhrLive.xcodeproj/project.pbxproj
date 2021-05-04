@@ -54,6 +54,8 @@
 		BC70BB3F26405AA300A30949 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */; };
 		BC70BB4126406B7D00A30949 /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70BB4026406B7D00A30949 /* AmuseMenuView.swift */; };
 		BC70BB4326406BAA00A30949 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */; };
+		BC8F3AAE2641689B00BBA40D /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AAD2641689B00BBA40D /* RoomShowViewController.swift */; };
+		BC8F3AB0264168D200BBA40D /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AAF264168D200BBA40D /* RoomNormalViewController.swift */; };
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
@@ -112,6 +114,8 @@
 		BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		BC70BB4026406B7D00A30949 /* AmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
 		BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
+		BC8F3AAD2641689B00BBA40D /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		BC8F3AAF264168D200BBA40D /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5A21412618E9AB00103AE3 /* Main */,
+				BC8F3AA92641685B00BBA40D /* Room */,
 				BC5A213C2618E9AB00103AE3 /* Home */,
 				BC5A21402618E9AB00103AE3 /* Live */,
 				BC5A213E2618E9AB00103AE3 /* Follow */,
@@ -418,6 +423,39 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		BC8F3AA92641685B00BBA40D /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				BC8F3AAB2641685B00BBA40D /* Model */,
+				BC8F3AAC2641685B00BBA40D /* View */,
+				BC8F3AAA2641685B00BBA40D /* Controller */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		BC8F3AAA2641685B00BBA40D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC8F3AAD2641689B00BBA40D /* RoomShowViewController.swift */,
+				BC8F3AAF264168D200BBA40D /* RoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC8F3AAB2641685B00BBA40D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC8F3AAC2641685B00BBA40D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C190BE1A2636A2C700D1EE89 /* ViewModle */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +602,7 @@
 				BC0B522E263D5E8800F41859 /* AVView.swift in Sources */,
 				BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */,
 				BC3724F0261C8A42003CD519 /* PageTitleView.swift in Sources */,
+				BC8F3AB0264168D200BBA40D /* RoomNormalViewController.swift in Sources */,
 				BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */,
 				BC24AEC1263F299C00D095A3 /* AmuseViewController.swift in Sources */,
 				BC3724F7261CAE29003CD519 /* PageContentView.swift in Sources */,
@@ -585,6 +624,7 @@
 				BC393DE0262C347600337FAB /* NetworkTools.swift in Sources */,
 				BC5799DC264107E300452F77 /* FunnyViewModel.swift in Sources */,
 				BC5A216D261A146500103AE3 /* HomeViewController.swift in Sources */,
+				BC8F3AAE2641689B00BBA40D /* RoomShowViewController.swift in Sources */,
 				BC393DE8262C38CC00337FAB /* RecommendViewModel.swift in Sources */,
 				BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */,
 				BC393DF2262DB20C00337FAB /* AnchorModel.swift in Sources */,
