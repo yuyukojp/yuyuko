@@ -121,12 +121,20 @@ extension BaseAnchorViewController: UICollectionViewDelegate,AVPlayerViewControl
     }
     private func presentShowRoomVc() {
         //1.创建showroomvx
-        let showRoomVc = RoomShowViewController()
-        //2.以model方式弹出
-        present(showRoomVc, animated: true, completion: nil)
+        guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
+        let player = AVPlayer(url: url)
+        
+        //2.以model方式弹出      
+    
+        playerController = AVPlayerViewController()
+        playerController.player = player
+        playerController.allowsPictureInPicturePlayback = true
+        playerController.delegate = self
+        playerController.player?.play()
+        navigationController?.pushViewController(playerController, animated: true)
     }
     private func pushNormalRoomVc() {
-        let normalRoomVc = RoomNormalViewController()
+        //let normalRoomVc = RoomNormalViewController()
        // navigationController?.pushViewController(normalRoomVc, animated: true)
         guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
         
