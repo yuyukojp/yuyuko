@@ -14,10 +14,17 @@
             filePath = "qqhrLive/Classes/Home/Controller/RecommendViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "81"
             endingLineNumber = "81"
             landmarkName = "RecommendViewController"
             landmarkType = "21">
+=======
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "setupUI()"
+            landmarkType = "7">
+>>>>>>> dev-home
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

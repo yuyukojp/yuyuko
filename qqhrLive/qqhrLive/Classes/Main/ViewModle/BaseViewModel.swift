@@ -40,7 +40,20 @@ extension BaseViewModel {
             }
             
             // 3.完成回调
+ 
+            NetworkTools.requestData(.get, URLString: URLString) { (result) in
+                 //1.对结果进行处理
+                 guard let resultDict = result as? [String: Any] else { return }
+                 guard let dataArray = resultDict["data"] as? [[String: Any]] else { return }
+                 //2.遍历字典
+                 for dict in dataArray {
+                     self.anchorGroups.append(AnchorGroup(dict: dict))
+                 }
+            
             finishedCallback()
+            
+            }
+            
         }
     }
 }

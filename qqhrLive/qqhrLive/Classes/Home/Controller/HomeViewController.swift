@@ -30,14 +30,20 @@ class HomeViewController: UIViewController {
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         //2.确定所有子控制器
         var childVcs = [UIViewController]()
+        //推荐控制器
         childVcs.append(RecommendViewController())
-        for _ in 0..<3 {
+        childVcs.append(GameViewController())
+        childVcs.append(AmuseViewController())
+        childVcs.append(FunneyViewController())
+        /*
+        for _ in 0..<1 {
             let vc = UIViewController()
             //view北境颜色用随机数生成
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             
             childVcs.append(vc)
         }
+ */
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
         return contentView
