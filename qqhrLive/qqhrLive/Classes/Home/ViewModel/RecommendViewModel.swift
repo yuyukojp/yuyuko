@@ -58,7 +58,7 @@ extension RecommendViewModel {
             dGroup.leave()
         }
         
-        // 4.请求第二部分颜值数据
+        // 4.请求第二部分考研数据
         dGroup.enter()
         NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: parameters) { (result) in
             // 1.将result转成字典类型

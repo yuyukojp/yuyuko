@@ -14,6 +14,7 @@ let kPrettyItemH = kNormalItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 var playerController = AVPlayerViewController()
+private var kMod = false
 
 private let kNormalCellID = "kNormalCellID"
 let kPrettyCellID = "kPrettyCellID"
@@ -122,30 +123,32 @@ extension BaseAnchorViewController: UICollectionViewDelegate,AVPlayerViewControl
     private func presentShowRoomVc() {
         //1.创建showroomvx
         guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
-        let player = AVPlayer(url: url)
-        
-        //2.以model方式弹出      
-    
-        playerController = AVPlayerViewController()
-        playerController.player = player
-        playerController.allowsPictureInPicturePlayback = true
-        playerController.delegate = self
-        playerController.player?.play()
-        navigationController?.pushViewController(playerController, animated: true)
+      
+        avplayerModel(url: url, kMod: true)
     }
     private func pushNormalRoomVc() {
         //let normalRoomVc = RoomNormalViewController()
        // navigationController?.pushViewController(normalRoomVc, animated: true)
         guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
-        
+
+        avplayerModel(url: url, kMod: false)
+    }
+    //弹出avplayer方法
+    private func avplayerModel(url:URL, kMod:Bool) {
         let player = AVPlayer(url: url)
         playerController = AVPlayerViewController()
         playerController.player = player
-        playerController.allowsPictureInPicturePlayback = true
+        playerController.allowsPictureInPicturePlayback = false
         playerController.delegate = self
         playerController.player?.play()
         
-        self.present(playerController, animated: true, completion: nil)
+        if kMod == true {
+            navigationController?.pushViewController(playerController, animated: true)
+        } else {
+            self.present(playerController, animated: true, completion: nil)
+        }
+        
+       
         
     }
 }
