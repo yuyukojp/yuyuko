@@ -15,7 +15,7 @@ class RoomNormalViewController: UIViewController, AVPlayerViewControllerDelegate
         super.viewDidLoad()
 
         //view.backgroundColor = UIColor.yellow
-        guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
+      /*  guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
         
         let player = AVPlayer(url: url)
         playerController = AVPlayerViewController()
@@ -24,7 +24,7 @@ class RoomNormalViewController: UIViewController, AVPlayerViewControllerDelegate
         playerController.delegate = self
         playerController.player?.play()
         
-        self.present(playerController, animated: true, completion: nil)
+        self.present(playerController, animated: true, completion: nil)*/
     }
     
     override func viewWillAppear(_ animated: Bool) {

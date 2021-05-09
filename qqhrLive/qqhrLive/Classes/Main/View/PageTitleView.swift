@@ -8,7 +8,7 @@
 import UIKit
 
 //定义代理协议
-protocol PageTitleViewDelegate : class {
+protocol PageTitleViewDelegate : AnyObject {
     func pageTitleVIew(titleView : PageTitleView, selectedIndex index : Int)
 }
 

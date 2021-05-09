@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PageContentViewDelegate : class {
+protocol PageContentViewDelegate : AnyObject {
     func pageContentView(_ contentView : PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
 }
 
