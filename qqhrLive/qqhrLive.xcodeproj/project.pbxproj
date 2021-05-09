@@ -56,6 +56,7 @@
 		BC70BB4326406BAA00A30949 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */; };
 		BC8F3AAE2641689B00BBA40D /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AAD2641689B00BBA40D /* RoomShowViewController.swift */; };
 		BC8F3AB0264168D200BBA40D /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AAF264168D200BBA40D /* RoomNormalViewController.swift */; };
+		BC8F3AB226416EA500BBA40D /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AB126416EA500BBA40D /* CustomNavigationController.swift */; };
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
@@ -116,6 +117,7 @@
 		BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		BC8F3AAD2641689B00BBA40D /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		BC8F3AAF264168D200BBA40D /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		BC8F3AB126416EA500BBA40D /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				BC5A212A2618E46D00103AE3 /* Main.storyboard */,
 				BC24AEBE263EA4C500D095A3 /* BaseViewController.swift */,
 				BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */,
+				BC8F3AB126416EA500BBA40D /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				BC0B522E263D5E8800F41859 /* AVView.swift in Sources */,
 				BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */,
 				BC3724F0261C8A42003CD519 /* PageTitleView.swift in Sources */,
+				BC8F3AB226416EA500BBA40D /* CustomNavigationController.swift in Sources */,
 				BC8F3AB0264168D200BBA40D /* RoomNormalViewController.swift in Sources */,
 				BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */,
 				BC24AEC1263F299C00D095A3 /* AmuseViewController.swift in Sources */,
