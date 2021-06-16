@@ -130,7 +130,6 @@ extension BaseAnchorViewController: UICollectionViewDelegate,AVPlayerViewControl
         //let normalRoomVc = RoomNormalViewController()
        // navigationController?.pushViewController(normalRoomVc, animated: true)
         guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
-
         avplayerModel(url: url, kMod: false)
     }
     //弹出avplayer方法
@@ -147,8 +146,5 @@ extension BaseAnchorViewController: UICollectionViewDelegate,AVPlayerViewControl
         } else {
             self.present(playerController, animated: true, completion: nil)
         }
-        
-       
-        
     }
 }
