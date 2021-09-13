@@ -61,6 +61,8 @@
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
+		C14DAE6F26EF028E00AB69DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DAE6E26EF028E00AB69DA /* ProfileViewController.swift */; };
+		C14DAE7126EF174600AB69DA /* newAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DAE7026EF174600AB69DA /* newAccountViewController.swift */; };
 		C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */; };
 		C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E52882634FFF50055E9B5 /* BaseGameModel.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +125,8 @@
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
+		C14DAE6E26EF028E00AB69DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C14DAE7026EF174600AB69DA /* newAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newAccountViewController.swift; sourceTree = "<group>"; };
 		C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C19E52882634FFF50055E9B5 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		C4DB69C104D24398844DB248 /* Pods-qqhrLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqhrLive.debug.xcconfig"; path = "Target Support Files/Pods-qqhrLive/Pods-qqhrLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -408,6 +412,8 @@
 			isa = PBXGroup;
 			children = (
 				BC5A21562618F08100103AE3 /* Profile.storyboard */,
+				C14DAE6E26EF028E00AB69DA /* ProfileViewController.swift */,
+				C14DAE7026EF174600AB69DA /* newAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -609,6 +615,7 @@
 				BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */,
 				BC3724F0261C8A42003CD519 /* PageTitleView.swift in Sources */,
 				BC8F3AB226416EA500BBA40D /* CustomNavigationController.swift in Sources */,
+				C14DAE7126EF174600AB69DA /* newAccountViewController.swift in Sources */,
 				BC8F3AB0264168D200BBA40D /* RoomNormalViewController.swift in Sources */,
 				BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */,
 				BC24AEC1263F299C00D095A3 /* AmuseViewController.swift in Sources */,
@@ -632,6 +639,7 @@
 				BC5799DC264107E300452F77 /* FunnyViewModel.swift in Sources */,
 				BC85A1902678E489007583A1 /* LiveViewController.swift in Sources */,
 				BC5A216D261A146500103AE3 /* HomeViewController.swift in Sources */,
+				C14DAE6F26EF028E00AB69DA /* ProfileViewController.swift in Sources */,
 				BC8F3AAE2641689B00BBA40D /* RoomShowViewController.swift in Sources */,
 				BC393DE8262C38CC00337FAB /* RecommendViewModel.swift in Sources */,
 				BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */,
@@ -801,7 +809,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VB7PYHH8WS;
+				DEVELOPMENT_TEAM = FX4L969549;
 				INFOPLIST_FILE = qqhrLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -824,7 +832,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VB7PYHH8WS;
+				DEVELOPMENT_TEAM = FX4L969549;
 				INFOPLIST_FILE = qqhrLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
