@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class ProFileViewController: UIViewController {
+    var HttpTools = HttoTools()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class ProFileViewController: UIViewController {
     }
     @IBAction func newAccountButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        
     }
     
     @IBAction func loginButton(_ sender: Any) {
@@ -29,5 +31,11 @@ extension ProFileViewController {
     private func setupUI() {
         view.backgroundColor = UIColor .systemPink
 
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        HttpTools.test {
+            print("+++++获取数据")
+        }
     }
 }

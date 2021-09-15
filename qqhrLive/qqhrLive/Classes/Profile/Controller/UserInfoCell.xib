@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="UserInfoCell" customModule="qqhrLive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpR-Uw-V3D">
+                        <rect key="frame" x="16" y="11.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-hR-5GF">
+                        <rect key="frame" x="291" y="11" width="16" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="iY8-ci-nb5"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemGrayColor"/>
+                        <state key="normal" image="pencil.slash" catalog="system"/>
+                    </button>
+                    <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIh-Cx-uj4">
+                        <rect key="frame" x="258" y="6.5" width="51" height="31"/>
+                    </switch>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="プレイスホルダー" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ye1-a3-vkB">
+                        <rect key="frame" x="135" y="13.5" width="114.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dpR-Uw-V3D" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AG6-5W-nJ0"/>
+                    <constraint firstItem="Ye1-a3-vkB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AXJ-gd-gQ6"/>
+                    <constraint firstItem="Ye1-a3-vkB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="135" id="JvB-4e-F6S"/>
+                    <constraint firstItem="KIh-Cx-uj4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6.5" id="Jy9-YI-BrQ"/>
+                    <constraint firstAttribute="bottom" secondItem="KIh-Cx-uj4" secondAttribute="bottom" constant="6.5" id="N36-lr-rgu"/>
+                    <constraint firstItem="KIh-Cx-uj4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UGw-dC-oVa"/>
+                    <constraint firstItem="dpR-Uw-V3D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="a0Z-4w-xCy"/>
+                    <constraint firstAttribute="trailing" secondItem="KIh-Cx-uj4" secondAttribute="trailing" constant="16" id="a6i-aq-fYh"/>
+                    <constraint firstItem="XPu-hR-5GF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ndE-K6-O9g"/>
+                    <constraint firstAttribute="trailing" secondItem="XPu-hR-5GF" secondAttribute="trailing" constant="16" id="uJw-px-zlM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="115.21739130434783" y="89.732142857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pencil.slash" catalog="system" width="128" height="113"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
