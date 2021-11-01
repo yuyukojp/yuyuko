@@ -15,14 +15,61 @@
                     <view key="view" contentMode="scaleToFill" id="zFh-ZK-c1M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax5-lL-Rii">
+                                <rect key="frame" x="127" y="820" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pyu-K5-HA8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="beaty"/>
+                                <connections>
+                                    <action selector="tapBeaty:" destination="8tA-eL-JMS" eventType="touchUpInside" id="2y0-ML-6Xe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xE4-GU-qgK">
+                                <rect key="frame" x="127" y="772" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bGo-25-63j"/>
+                                    <constraint firstAttribute="width" constant="160" id="cmD-PZ-zo1"/>
+                                </constraints>
+                                <state key="normal" title="PUSH開始"/>
+                                <connections>
+                                    <action selector="tapPush:" destination="8tA-eL-JMS" eventType="touchUpInside" id="Y9B-rM-zIV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuI-6D-L1U">
+                                <rect key="frame" x="127" y="724" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SCa-3U-2dX"/>
+                                    <constraint firstAttribute="width" constant="160" id="ShZ-qj-b3H"/>
+                                </constraints>
+                                <state key="normal" title="change"/>
+                                <connections>
+                                    <action selector="changeCamera:" destination="8tA-eL-JMS" eventType="touchUpInside" id="Q3t-Yr-BLg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1sR-aa-Pxa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ax5-lL-Rii" firstAttribute="top" secondItem="xE4-GU-qgK" secondAttribute="bottom" constant="10" id="0j3-EG-4Ke"/>
+                            <constraint firstItem="Ax5-lL-Rii" firstAttribute="trailing" secondItem="xE4-GU-qgK" secondAttribute="trailing" id="Cmk-d7-hZf"/>
+                            <constraint firstItem="xE4-GU-qgK" firstAttribute="top" secondItem="AuI-6D-L1U" secondAttribute="bottom" constant="10" id="Mgk-6A-c1y"/>
+                            <constraint firstItem="Ax5-lL-Rii" firstAttribute="leading" secondItem="xE4-GU-qgK" secondAttribute="leading" id="Ve7-yy-evf"/>
+                            <constraint firstItem="xE4-GU-qgK" firstAttribute="centerX" secondItem="zFh-ZK-c1M" secondAttribute="centerX" id="dAR-Lf-lb2"/>
+                            <constraint firstItem="Ax5-lL-Rii" firstAttribute="bottom" secondItem="1sR-aa-Pxa" secondAttribute="bottom" id="j5H-Ni-dJd"/>
+                            <constraint firstItem="AuI-6D-L1U" firstAttribute="centerX" secondItem="zFh-ZK-c1M" secondAttribute="centerX" id="pZ1-1c-agB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F6O-Zl-E8g"/>
+                    <connections>
+                        <outlet property="pushButton" destination="xE4-GU-qgK" id="iUP-fV-96l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZ3-rn-ogf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880" y="-236"/>
+            <point key="canvasLocation" x="1879.7101449275365" y="-236.38392857142856"/>
         </scene>
         <!--直播-->
         <scene sceneID="lXZ-sq-KYU">

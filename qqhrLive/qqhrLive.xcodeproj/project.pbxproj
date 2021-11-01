@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		445713CE81313A700A15F0CF /* Pods_qqhrLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */; };
 		BC0B5208263D15B900F41859 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B5206263D15B900F41859 /* CollectionGameCell.swift */; };
 		BC0B5209263D15B900F41859 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0B5207263D15B900F41859 /* CollectionGameCell.xib */; };
 		BC0B522E263D5E8800F41859 /* AVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B522D263D5E8800F41859 /* AVView.swift */; };
@@ -66,6 +65,7 @@
 		C14DAE7426EF4B6C00AB69DA /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DAE7226EF4B6C00AB69DA /* UserInfoCell.swift */; };
 		C14DAE7526EF4B6C00AB69DA /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14DAE7326EF4B6C00AB69DA /* UserInfoCell.xib */; };
 		C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */; };
+		C196E31A272F96B1006758A4 /* Pods_qqhrLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */; };
 		C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E52882634FFF50055E9B5 /* BaseGameModel.swift */; };
 		C1D2417C26F18A9F006692D8 /* HttpTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2417B26F18A9F006692D8 /* HttpTools.swift */; };
 /* End PBXBuildFile section */
@@ -143,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				445713CE81313A700A15F0CF /* Pods_qqhrLive.framework in Frameworks */,
+				C196E31A272F96B1006758A4 /* Pods_qqhrLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,7 +821,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FX4L969549;
+				DEVELOPMENT_TEAM = 3YDR7T8879;
 				INFOPLIST_FILE = qqhrLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -844,7 +844,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FX4L969549;
+				DEVELOPMENT_TEAM = 3YDR7T8879;
 				INFOPLIST_FILE = qqhrLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
