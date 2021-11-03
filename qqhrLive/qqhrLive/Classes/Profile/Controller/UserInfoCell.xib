@@ -54,6 +54,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailTextField" destination="Ye1-a3-vkB" id="8Zu-10-NKm"/>
+                <outlet property="protocolSwitch" destination="KIh-Cx-uj4" id="xtF-td-sCL"/>
+                <outlet property="showPasswordButton" destination="XPu-hR-5GF" id="1Gb-df-wyY"/>
+                <outlet property="titleLabel" destination="dpR-Uw-V3D" id="pMJ-XP-YRG"/>
+            </connections>
             <point key="canvasLocation" x="115.21739130434783" y="89.732142857142847"/>
         </tableViewCell>
     </objects>

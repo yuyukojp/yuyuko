@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class newAccountViewController: UIViewController, UITableViewDataSource {
+class newAccountViewController: UIViewController {
    
 
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class newAccountViewController: UIViewController, UITableViewDataSource {
 //MARK:- 设置UI界面
 extension newAccountViewController {
     private func setupUI() {
-        view.backgroundColor = UIColor .systemPink
+        view.backgroundColor = UIColor.systemPink
         setLeftBarButtonItem()
         setupTableView()
         self.navigationItem.title = "新規登録"
@@ -76,9 +76,72 @@ extension newAccountViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "UserInfoCell", bundle: nil), forCellReuseIdentifier: "UserInfoCell")
         tableView.estimatedRowHeight = 44
+        tableView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         view.addSubview(tableView)
     }
-   
+    
+    //MARK:- 各項目データ、いずれ抽出すべき
+    private func returnText(index: (Int, Int)) -> (String, String) {
+        // case
+        var section: Int!
+        var row: Int!
+        var title: String!
+        var placeholder: String!
+        
+        section = index.0
+        row = index.1
+        
+        switch section {
+        case 0:
+            switch row {
+            case 0:
+                title = "ユーザー名"
+                placeholder = "ユーザー名を入力してください"
+            case 1:
+                title = "パスワード"
+                placeholder = "パスワードを入力してください"
+            case 2:
+                title = "パスワード確認"
+                placeholder =  "上と同じものを入力して！"
+            default:
+                "エラー"
+            }
+        case 1:
+            switch row {
+            case 0:
+                title = "電話番号"
+                placeholder = "数字のみ入力して！"
+            case 1:
+                title = "メールアドレス"
+                placeholder = "xx@xx.xxの形式で入力して！"
+            default:
+                "またエラーだ！"
+            }
+        default:
+            "とりあえずエラー"
+        }
+
+        
+        return (title, placeholder)
+    }
+}
+
+extension newAccountViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2//mode == .editMode ? 5 : 4
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 3
+        case 1:
+            return 2
+        default:
+            return 0
+        }
+    }
+    
 }
 
 extension newAccountViewController: UITableViewDelegate {
@@ -104,24 +167,31 @@ extension newAccountViewController: UITableViewDelegate {
 
         let label = UILabel(frame: CGRect(x: 16, y: 5, width: 200, height: 42))
         label.numberOfLines = 0
-        label.textColor = #colorLiteral(red: 0.4705882353, green: 0.4705882353, blue: 0.4705882353, alpha: 1)
+        label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize: 14)
         label.adjustsFontSizeToFitWidth = true
-
+        switch section {
+        case 0:
+            label.text = "ユーザ名"
+        case 1:
+            label.text = "その他"
+        default:
+            label.text = "むふふ"
+        }
+        
         view.addSubview(label)
         return view
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellid = "UserInfoCell"
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellid)
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
-        }
-        return cell!
+//        let cellid = "UserInfoCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as? UserInfoCell else { return UITableViewCell() }
+        let path = (indexPath.section, indexPath.row)
+        cell.setup(title: returnText(index: path).0, detail: nil, isPassword: false)
+        cell.detailTextField.placeholder = returnText(index: path).1
+//        var cell = tableView.dequeueReusableCell(withIdentifier: cellid)
+
+        return cell
     }
 }

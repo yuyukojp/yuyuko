@@ -17,7 +17,8 @@ class PageContentView: UIView {
 
     //定义属性
     private var childVcs : [UIViewController]
-    private weak var parentViewController : UIViewController?   //改成弱引用，否则会与homeviewcontrooler循环引用
+    private weak var parentViewController : UIViewController?
+    //改成弱引用，否则会与homeviewcontrooler循环引用
     private var startOffsetX : CGFloat = 0
     private var isForbidScrollDelegate : Bool = false
     weak var delegate : PageContentViewDelegate?

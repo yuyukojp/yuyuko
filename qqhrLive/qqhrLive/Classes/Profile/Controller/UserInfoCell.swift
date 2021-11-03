@@ -8,10 +8,11 @@
 import UIKit
 
 class UserInfoCell: UITableViewCell {
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var detailTextField: UITextField!
-    @IBOutlet var showPasswordButton: UIButton!
-    @IBOutlet var protocolSwitch: UISwitch!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailTextField: UITextField!
+    @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet weak var protocolSwitch: UISwitch!
+    
 
     private let siteNameIndex: Int = 0
     private let addressIndex: Int = 2
@@ -29,6 +30,7 @@ class UserInfoCell: UITableViewCell {
     }
 
     func setup(title: String, detail: String?, isPassword: Bool) {
+        self.backgroundColor = UIColor.white
         titleLabel.text = title
         detailTextField.text = detail
         detailTextField.isSecureTextEntry = isPassword
