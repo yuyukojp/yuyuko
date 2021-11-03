@@ -46,8 +46,7 @@ extension newAccountViewController {
         setLeftBarButtonItem()
         setRightBarButtonItem()
         setupTableView()
-        self.navigationItem.title = "新規登録"
-        
+        self.navigationItem.title = "新規登録"        
     }
        
     private func changeViewController() {
@@ -171,7 +170,8 @@ extension newAccountViewController {
                 title = "パスワード確認"
                 placeholder =  "上と同じものを入力して！"
             default:
-                "エラー"
+                title = "title：エラー"
+                placeholder = "placeholder：エラー"
             }
         case 1:
             switch row {
@@ -182,10 +182,12 @@ extension newAccountViewController {
                 title = "メールアドレス"
                 placeholder = "xx@xx.xxの形式で入力して！"
             default:
-                "またエラーだ！"
+                title = "title：エラー"
+                placeholder = "placeholder：エラー"
             }
         default:
-            "とりあえずエラー"
+            title = "title：エラー"
+            placeholder = "placeholder：エラー"
         }
 
         
@@ -194,7 +196,7 @@ extension newAccountViewController {
     
     private func showInfoCheckAlert(str: String) {
         let alert = newAccountViewController.makeAlert(
-            title: "エラータイトル",
+            title: "エラーっす",
             message: str,
             okAction: ("うっす", {
                 self.tableView.reloadData()
@@ -264,7 +266,6 @@ extension newAccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 || section == 4 { return UIView() }
         let view = UIView()
-        view.backgroundColor = .clear
 
         let label = UILabel(frame: CGRect(x: 16, y: 5, width: 200, height: 42))
         label.numberOfLines = 0
@@ -288,7 +289,6 @@ extension newAccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let itemCounts = 2
-        let path = (indexPath.section, indexPath.row)
         
         switch indexPath.section {
         case 0:

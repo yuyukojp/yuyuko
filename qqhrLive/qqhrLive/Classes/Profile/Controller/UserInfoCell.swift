@@ -30,7 +30,6 @@ class UserInfoCell: UITableViewCell {
     }
 
     func setup(title: String, detail: String?, isPassword: Bool) {
-        self.backgroundColor = UIColor.white
         titleLabel.text = title
         detailTextField.text = detail
         detailTextField.isSecureTextEntry = isPassword
