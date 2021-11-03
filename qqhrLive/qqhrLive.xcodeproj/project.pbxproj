@@ -67,7 +67,7 @@
 		C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */; };
 		C196E31A272F96B1006758A4 /* Pods_qqhrLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */; };
 		C196E31E272FD7E2006758A4 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196E31D272FD7E1006758A4 /* FollowViewController.swift */; };
-		C196E3202732516C006758A4 /* FileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196E31F2732516C006758A4 /* FileModel.swift */; };
+		C196E3202732516C006758A4 /* InfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196E31F2732516C006758A4 /* InfoData.swift */; };
 		C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E52882634FFF50055E9B5 /* BaseGameModel.swift */; };
 		C1D2417C26F18A9F006692D8 /* HttpTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2417B26F18A9F006692D8 /* HttpTools.swift */; };
 /* End PBXBuildFile section */
@@ -136,7 +136,7 @@
 		C14DAE7326EF4B6C00AB69DA /* UserInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
 		C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C196E31D272FD7E1006758A4 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
-		C196E31F2732516C006758A4 /* FileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileModel.swift; path = qqhrLive/Classes/Follow/Controller/FileModel.swift; sourceTree = SOURCE_ROOT; };
+		C196E31F2732516C006758A4 /* InfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoData.swift; path = qqhrLive/Classes/Follow/Controller/InfoData.swift; sourceTree = SOURCE_ROOT; };
 		C19E52882634FFF50055E9B5 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		C1D2417B26F18A9F006692D8 /* HttpTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTools.swift; sourceTree = "<group>"; };
 		C4DB69C104D24398844DB248 /* Pods-qqhrLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqhrLive.debug.xcconfig"; path = "Target Support Files/Pods-qqhrLive/Pods-qqhrLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -435,7 +435,7 @@
 		BC5A216B261A12B700103AE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C196E31F2732516C006758A4 /* FileModel.swift */,
+				C196E31F2732516C006758A4 /* InfoData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -625,7 +625,7 @@
 				BC3724FA261CB146003CD519 /* UIColor-Extension.swift in Sources */,
 				C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */,
 				BC24AEBF263EA4C500D095A3 /* BaseViewController.swift in Sources */,
-				C196E3202732516C006758A4 /* FileModel.swift in Sources */,
+				C196E3202732516C006758A4 /* InfoData.swift in Sources */,
 				BC21F5E92629BCE200E4A824 /* RecommendViewController.swift in Sources */,
 				BC70BB4126406B7D00A30949 /* AmuseMenuView.swift in Sources */,
 				BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */,

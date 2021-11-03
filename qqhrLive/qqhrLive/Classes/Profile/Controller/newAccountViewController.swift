@@ -9,7 +9,16 @@ import Foundation
 import UIKit
 
 class newAccountViewController: UIViewController {
-   
+    private var dataSource: [String] = []
+    private let userNameIndex: Int = 0
+    private let passwordIndex: Int = 1
+    private let passwprdConfirmIndex: Int = 2
+    private let telIndex: Int = 3
+    private let emailIndex: Int = 4
+    private var infoChecked: [Bool] = [false, false, false, false, false]
+//    private let userNameIndex: Int = 5
+//    private let passwordIndex: Int = 6
+//    private var focusCellTag: Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +40,11 @@ class newAccountViewController: UIViewController {
 
 //MARK:- 设置UI界面
 extension newAccountViewController {
+    
     private func setupUI() {
         view.backgroundColor = UIColor.systemPink
         setLeftBarButtonItem()
+        setRightBarButtonItem()
         setupTableView()
         self.navigationItem.title = "新規登録"
         
@@ -45,7 +56,7 @@ extension newAccountViewController {
        // self.navigationController?.pushViewController(change, animated: true)
     }
     
-    //MARK:- 设置right navigationbar
+    //MARK:- 设置left navigationbar
     func setLeftBarButtonItem(image: UIImage? = UIImage(named: "pull_loading_4_60x60_"), title: String? = "閉じる") {
         //戻るボタンに画像と文字共存の場合
 //        let  backButton = UIButton (type: .system )
@@ -62,14 +73,70 @@ extension newAccountViewController {
 //        self.navigationItem.leftBarButtonItems = [spacer,leftBarBtn]
         
         //画像、文字のみの場合
-        let item = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(rightBarButtonItemSelected))
+        let item = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(leftBarButtonItemSelected))
         self.navigationItem.leftBarButtonItem = item
         
     }
-    
-    @objc func rightBarButtonItemSelected(_ sender: UIButton) {
+    //MARK:-　设置Right navigationbar
+    func setRightBarButtonItem(image: UIImage? = UIImage(named: "pull_loading_4_60x60_"), title: String? = "完了") {
+        //画像、文字のみの場合
+        let item = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(rightBarButtonItemSelected))
+        self.navigationItem.rightBarButtonItem = item
+        
+    }
+    @objc func leftBarButtonItemSelected(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    @objc func rightBarButtonItemSelected(_ sender: UIButton) {
+//        if checkUserInfo().0 {
+//            navigationController?.popViewController(animated: true)
+//            saveAction()
+//        } else {
+//            showInfoCheckAlert(str: checkUserInfo().1!)
+//        }
+        showInfoCheckAlert(str: "( ✌︎'ω')✌︎ ✌︎('ω'✌︎ )")
+        
+    }
+    
+    func checkUserInfo() -> (checkInfoFlag: Bool, errorMessage: String?) {
+        // User名チェック
+        print(dataSource[userNameIndex])
+        if dataSource[userNameIndex].count > 32 {
+            return (false, "長すぎ32以内にして")
+        }
+
+        // パスワードチェッく
+        print(passwordIndex)
+        if dataSource[passwordIndex].count > 20 {
+            return (false, "２０文字以内にして")
+        }
+        // パスワードが同一であるかをチェック
+        if dataSource[passwordIndex] != dataSource[passwprdConfirmIndex] {
+            return (false, "パスワードと確認パスワードが違うの！")
+        }
+
+        return (true, nil)
+    }
+    
+    func saveAction() {
+//        saveSiteData { [weak self] isSuccess, _ in
+//            self?.hideProgress()
+//            if isSuccess {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                    self?.dismiss(animated: true, completion: nil)
+//                }
+//            } else {
+//                self?.navigationItem.rightBarButtonItem?.isEnabled = true
+//            }
+//        }
+    }
+    
+    func setupSiteInfo(id: Int?) {
+        var data: InfoData?
+
+    }
+    
     
     private func setupTableView() {
         tableView.dataSource = self
@@ -123,6 +190,40 @@ extension newAccountViewController {
 
         
         return (title, placeholder)
+    }
+    
+    private func showInfoCheckAlert(str: String) {
+        let alert = newAccountViewController.makeAlert(
+            title: "エラータイトル",
+            message: str,
+            okAction: ("うっす", {
+                self.tableView.reloadData()
+            }),
+            cacelAction: nil
+        )
+        present(alert, animated: true, completion: nil)
+    }
+    
+    static func makeAlert(title: String?,
+                          message: String?,
+                          okAction: (title: String, action: () -> Void)?,
+                          cacelAction: (title: String, action: () -> Void)?) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if okAction != nil {
+            let ok = UIAlertAction(title: okAction?.title, style: .default) { action in
+                okAction?.action()
+            }
+            alert.addAction(ok)
+        }
+
+        if cacelAction != nil {
+            let cancel = UIAlertAction(title: cacelAction?.title, style: .default) { action in
+                cacelAction?.action()
+            }
+            alert.addAction(cancel)
+        }
+
+        return alert
     }
 }
 
@@ -185,13 +286,64 @@ extension newAccountViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cellid = "UserInfoCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as? UserInfoCell else { return UITableViewCell() }
-        let path = (indexPath.section, indexPath.row)
-        cell.setup(title: returnText(index: path).0, detail: nil, isPassword: false)
-        cell.detailTextField.placeholder = returnText(index: path).1
-//        var cell = tableView.dequeueReusableCell(withIdentifier: cellid)
 
-        return cell
+        let itemCounts = 2
+        let path = (indexPath.section, indexPath.row)
+        
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as? UserInfoCell else { return UITableViewCell() }
+            cell.detailTextField.placeholder = returnText(index: (indexPath.section, indexPath.row)).1
+            cell.detailTextField.tag = userNameIndex
+            cell.detailTextField.delegate = self
+            cell.selectionStyle = .none
+            let detailData = dataSource.count == itemCounts ? dataSource[indexPath.row] : nil
+            cell.setup(title: returnText(index: (indexPath.section, indexPath.row)).0, detail: detailData, isPassword: false)
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as? UserInfoCell else { return UITableViewCell() }
+            cell.detailTextField.placeholder = returnText(index: (indexPath.section, indexPath.row)).1
+            cell.detailTextField.tag = userNameIndex
+            cell.detailTextField.delegate = self
+            cell.selectionStyle = .none
+            let detailData = dataSource.count == itemCounts ?dataSource[indexPath.row] : nil
+            cell.setup(title: returnText(index: (indexPath.section, indexPath.row)).0, detail: detailData, isPassword: false)
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+}
+
+extension newAccountViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+//        dataSource[textField.tag] = textField.text ?? ""
+    }
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        infoChecked[textField.tag] = textField.text?.count ?? 0 > 0
+//        infoChecked[httpPortIndex] = true
+//        infoChecked[rtspPortIndex] = true
+//        updateSaveButton()
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if textField.tag == userNameIndex {
+//            return string.isSiteNameConfrim
+//        }
+//        if textField.tag == addressIndex {
+//            return string.isAlphanumericHyphenPeriod
+//        }
+//        if textField.tag == httpPortIndex || textField.tag == rtspPortIndex {
+//            return string.isNumeric
+//        }
+//        if textField.tag == userNameIndex || textField.tag == passwordIndex {
+//            return string.isAlphanumericNumber
+//        }
+
+        return true
     }
 }
