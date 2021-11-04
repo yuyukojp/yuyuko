@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+<<<<<<< HEAD
+			<key>orderHint</key>
+			<integer>1</integer>
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> UserInfo
+		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+<<<<<<< HEAD
+			<key>orderHint</key>
+			<integer>2</integer>
+=======
+			<key>isShown</key>
+			<false/>
+>>>>>>> UserInfo
+		</dict>
+		<key>LFLiveKit.xcscheme</key>
+		<dict>
+<<<<<<< HEAD
+			<key>orderHint</key>
+			<integer>0</integer>
+=======
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-qqhrLive.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+>>>>>>> UserInfo
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
+</dict>
+</plist>

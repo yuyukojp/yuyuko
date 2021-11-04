@@ -8,7 +8,6 @@
 import UIKit
 
 class FunnyViewModel: BaseViewModel {
-
 }
 
 extension FunnyViewModel {

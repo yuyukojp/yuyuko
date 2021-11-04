@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		445713CE81313A700A15F0CF /* Pods_qqhrLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */; };
 		BC0B5208263D15B900F41859 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B5206263D15B900F41859 /* CollectionGameCell.swift */; };
 		BC0B5209263D15B900F41859 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0B5207263D15B900F41859 /* CollectionGameCell.xib */; };
 		BC0B522E263D5E8800F41859 /* AVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B522D263D5E8800F41859 /* AVView.swift */; };
@@ -58,16 +57,23 @@
 		BC70BB3F26405AA300A30949 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */; };
 		BC70BB4126406B7D00A30949 /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70BB4026406B7D00A30949 /* AmuseMenuView.swift */; };
 		BC70BB4326406BAA00A30949 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */; };
+		BC85A1902678E489007583A1 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85A18E2678E489007583A1 /* LiveViewController.swift */; };
 		BC8F3AAE2641689B00BBA40D /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AAD2641689B00BBA40D /* RoomShowViewController.swift */; };
 		BC8F3AB0264168D200BBA40D /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AAF264168D200BBA40D /* RoomNormalViewController.swift */; };
->>>>>>> dev-home
+		BC8F3AB226416EA500BBA40D /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F3AB126416EA500BBA40D /* CustomNavigationController.swift */; };
 		BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D5792635834D001853AB /* CycleModel.swift */; };
 		BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */; };
 		BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */; };
+		C14DAE6F26EF028E00AB69DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DAE6E26EF028E00AB69DA /* ProfileViewController.swift */; };
+		C14DAE7126EF174600AB69DA /* newAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DAE7026EF174600AB69DA /* newAccountViewController.swift */; };
+		C14DAE7426EF4B6C00AB69DA /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DAE7226EF4B6C00AB69DA /* UserInfoCell.swift */; };
+		C14DAE7526EF4B6C00AB69DA /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14DAE7326EF4B6C00AB69DA /* UserInfoCell.xib */; };
 		C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */; };
-		C190BE2126379DB200D1EE89 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190BE1F26379DB200D1EE89 /* CollectionGameCell.swift */; };
-		C190BE2226379DB200D1EE89 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C190BE2026379DB200D1EE89 /* CollectionGameCell.xib */; };
+		C196E31A272F96B1006758A4 /* Pods_qqhrLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6226BF157D9B1108294690A2 /* Pods_qqhrLive.framework */; };
+		C196E31E272FD7E2006758A4 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196E31D272FD7E1006758A4 /* FollowViewController.swift */; };
+		C196E3202732516C006758A4 /* InfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196E31F2732516C006758A4 /* InfoData.swift */; };
 		C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E52882634FFF50055E9B5 /* BaseGameModel.swift */; };
+		C1D2417C26F18A9F006692D8 /* HttpTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2417B26F18A9F006692D8 /* HttpTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,16 +131,22 @@
 		BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		BC70BB4026406B7D00A30949 /* AmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
 		BC70BB4226406BAA00A30949 /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
+		BC85A18E2678E489007583A1 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		BC8F3AAD2641689B00BBA40D /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		BC8F3AAF264168D200BBA40D /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
->>>>>>> dev-home
+		BC8F3AB126416EA500BBA40D /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		BCC4D5792635834D001853AB /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleModel.swift; path = qqhrLive/Classes/Home/View/CycleModel.swift; sourceTree = SOURCE_ROOT; };
 		BCC4D57C263588B6001853AB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		BCC4D57D263588B6001853AB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
+		C14DAE6E26EF028E00AB69DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C14DAE7026EF174600AB69DA /* newAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newAccountViewController.swift; sourceTree = "<group>"; };
+		C14DAE7226EF4B6C00AB69DA /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
+		C14DAE7326EF4B6C00AB69DA /* UserInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
 		C190BE1B2636A2E200D1EE89 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		C190BE1F26379DB200D1EE89 /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
-		C190BE2026379DB200D1EE89 /* CollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
+		C196E31D272FD7E1006758A4 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		C196E31F2732516C006758A4 /* InfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoData.swift; path = qqhrLive/Classes/Follow/Controller/InfoData.swift; sourceTree = SOURCE_ROOT; };
 		C19E52882634FFF50055E9B5 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
+		C1D2417B26F18A9F006692D8 /* HttpTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTools.swift; sourceTree = "<group>"; };
 		C4DB69C104D24398844DB248 /* Pods-qqhrLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqhrLive.debug.xcconfig"; path = "Target Support Files/Pods-qqhrLive/Pods-qqhrLive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				445713CE81313A700A15F0CF /* Pods_qqhrLive.framework in Frameworks */,
+				C196E31A272F96B1006758A4 /* Pods_qqhrLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5A2171261A1EF000103AE3 /* Extension */,
+				C1D2417B26F18A9F006692D8 /* HttpTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -339,6 +352,7 @@
 				BC5A212A2618E46D00103AE3 /* Main.storyboard */,
 				BC24AEBE263EA4C500D095A3 /* BaseViewController.swift */,
 				BC70BB3E26405AA300A30949 /* BaseAnchorViewController.swift */,
+				BC8F3AB126416EA500BBA40D /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -379,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5A214F2618F05000103AE3 /* Live.storyboard */,
+				BC85A18E2678E489007583A1 /* LiveViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5A21522618F06E00103AE3 /* Follow.storyboard */,
+				C196E31D272FD7E1006758A4 /* FollowViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,6 +439,10 @@
 			isa = PBXGroup;
 			children = (
 				BC5A21562618F08100103AE3 /* Profile.storyboard */,
+				C14DAE6E26EF028E00AB69DA /* ProfileViewController.swift */,
+				C14DAE7026EF174600AB69DA /* newAccountViewController.swift */,
+				C14DAE7226EF4B6C00AB69DA /* UserInfoCell.swift */,
+				C14DAE7326EF4B6C00AB69DA /* UserInfoCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,6 +450,7 @@
 		BC5A216B261A12B700103AE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C196E31F2732516C006758A4 /* InfoData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -558,6 +579,7 @@
 				BC4145AF2633F3B500C1D0F5 /* RecommendCycleView.xib in Resources */,
 				BCC4D57F263588B6001853AB /* CollectionCycleCell.xib in Resources */,
 				BC393DB0262BE69A00337FAB /* CollectionPrettyCell.xib in Resources */,
+				C14DAE7526EF4B6C00AB69DA /* UserInfoCell.xib in Resources */,
 				BC5A21572618F08100103AE3 /* Profile.storyboard in Resources */,
 				BC490559263CF89100C70BAD /* RecommendGameView.xib in Resources */,
 				BC5A21542618F06E00103AE3 /* Follow.storyboard in Resources */,
@@ -616,15 +638,20 @@
 				BC4145AC2633F35C00C1D0F5 /* RecommendCycleView.swift in Sources */,
 				BC5A21252618E46D00103AE3 /* AppDelegate.swift in Sources */,
 				BC393D9F262BCF8100337FAB /* CollectionHeaderView.swift in Sources */,
+				C14DAE7426EF4B6C00AB69DA /* UserInfoCell.swift in Sources */,
 				BC3724FA261CB146003CD519 /* UIColor-Extension.swift in Sources */,
 				C19E52892634FFF50055E9B5 /* BaseGameModel.swift in Sources */,
 				BC24AEBF263EA4C500D095A3 /* BaseViewController.swift in Sources */,
+				C196E3202732516C006758A4 /* InfoData.swift in Sources */,
 				BC21F5E92629BCE200E4A824 /* RecommendViewController.swift in Sources */,
 				BC70BB4126406B7D00A30949 /* AmuseMenuView.swift in Sources */,
 				BCC4D57A2635834D001853AB /* CycleModel.swift in Sources */,
 				BC0B522E263D5E8800F41859 /* AVView.swift in Sources */,
 				BC5A21272618E46D00103AE3 /* SceneDelegate.swift in Sources */,
+				C196E31E272FD7E2006758A4 /* FollowViewController.swift in Sources */,
 				BC3724F0261C8A42003CD519 /* PageTitleView.swift in Sources */,
+				BC8F3AB226416EA500BBA40D /* CustomNavigationController.swift in Sources */,
+				C14DAE7126EF174600AB69DA /* newAccountViewController.swift in Sources */,
 				BC8F3AB0264168D200BBA40D /* RoomNormalViewController.swift in Sources */,
 				BC393DEF262DACA700337FAB /* AncharGroup.swift in Sources */,
 				BC24AEC1263F299C00D095A3 /* AmuseViewController.swift in Sources */,
@@ -642,6 +669,7 @@
 				BC393DAF262BE69A00337FAB /* CollectionPrettyCell.swift in Sources */,
 				C190BE1C2636A2E200D1EE89 /* BaseViewModel.swift in Sources */,
 				BC70BB3F26405AA300A30949 /* BaseAnchorViewController.swift in Sources */,
+				C1D2417C26F18A9F006692D8 /* HttpTools.swift in Sources */,
 				BC393DEC262DA7F400337FAB /* NSDate-Extension.swift in Sources */,
 				BC24AEC3263F2C0E00D095A3 /* AmuseViewModel.swift in Sources */,
 				BC4145A62633E67000C1D0F5 /* CollectionBaseCell.swift in Sources */,
@@ -651,7 +679,9 @@
 				BC393DA4262BDBEB00337FAB /* CollectionNormalCell.swift in Sources */,
 				BC393DE0262C347600337FAB /* NetworkTools.swift in Sources */,
 				BC5799DC264107E300452F77 /* FunnyViewModel.swift in Sources */,
+				BC85A1902678E489007583A1 /* LiveViewController.swift in Sources */,
 				BC5A216D261A146500103AE3 /* HomeViewController.swift in Sources */,
+				C14DAE6F26EF028E00AB69DA /* ProfileViewController.swift in Sources */,
 				BC8F3AAE2641689B00BBA40D /* RoomShowViewController.swift in Sources */,
 				BC393DE8262C38CC00337FAB /* RecommendViewModel.swift in Sources */,
 				BCC4D57E263588B6001853AB /* CollectionCycleCell.swift in Sources */,
@@ -821,7 +851,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VB7PYHH8WS;
+				DEVELOPMENT_TEAM = 3YDR7T8879;
 				INFOPLIST_FILE = qqhrLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -832,7 +862,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -844,7 +874,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VB7PYHH8WS;
+				DEVELOPMENT_TEAM = 3YDR7T8879;
 				INFOPLIST_FILE = qqhrLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -855,7 +885,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

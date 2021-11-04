@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     //懒加载属性 通过闭包来创建
     private lazy var pageTitleView : PageTitleView = { [weak self] in
         // 使用全局变量来定义大小
-       
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         
         let titles = ["推荐","学习","社团","娱乐"]
@@ -35,15 +34,7 @@ class HomeViewController: UIViewController {
         childVcs.append(GameViewController())
         childVcs.append(AmuseViewController())
         childVcs.append(FunneyViewController())
-        /*
-        for _ in 0..<1 {
-            let vc = UIViewController()
-            //view北境颜色用随机数生成
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            
-            childVcs.append(vc)
-        }
- */
+   
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
         return contentView
@@ -75,28 +66,12 @@ extension HomeViewController {
     }
     
     private func setupNavigationBar() {
-        //设置左侧的iteam
-        /* //普通创建
-        let btn = UIButton()
-        btn.setImage(UIImage(named: "launcher_logo_2020"), for: .normal)
-        btn.sizeToFit()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
-        */
+        //设置左侧的logo图标
         //使用构造函数来创建
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "launcher_logo_2020")
            
-        //设置右侧的iteam
-        //设置size否则间距过小
-        let size = CGSize(width: 40, height: 40)
-        /*
-        //在UIBarButtionItem-Extension 中扩充类来实现btn的描写
-        let historyIteam = UIBarButtonItem.createItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
-        
-        let searchIteam = UIBarButtonItem.createItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
-        
-        let qrcodeIteam = UIBarButtonItem.createItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
-        */
-        
+        //设置右侧的iteam       
+        let size = CGSize(width: 40, height: 40)        
         //使用构造函数来实现⬆️
         let historyIteam = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
         let searchIteam = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)

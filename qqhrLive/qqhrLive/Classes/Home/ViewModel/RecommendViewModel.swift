@@ -22,6 +22,7 @@ extension RecommendViewModel {
     func requestData(_ finishCallback : @escaping () -> ()) {
         // 1.定义参数
         let parameters = ["limit" : "4", "offset" : "0", "time" : NSDate.getCurrentTime()]
+        let parametersPart2 = ["limit" : "4", "offset" : "12", "time" : NSDate.getCurrentTime()]
         
         // 2.创建Group
         let dGroup = DispatchGroup()
@@ -58,9 +59,10 @@ extension RecommendViewModel {
             dGroup.leave()
         }
         
-        // 4.请求第二部分颜值数据
+        // 4.请求第二部分考研数据
         dGroup.enter()
-        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: parameters) { (result) in
+        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: parametersPart2) { (result) in
+            print("\(NSDate.getCurrentTime())")
             // 1.将result转成字典类型
             guard let resultDict = result as? [String : NSObject] else { return }
             
@@ -108,18 +110,12 @@ extension RecommendViewModel {
         NetworkTools.requestData(.get, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
             // 1.获取整体字典数据
             guard let resultDict = result as? [String : NSObject] else { return }
-            
             // 2.根据data的key获取数据
             guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
-            
             // 3.字典转模型对象
-            for dict in dataArray {
-               
+            for dict in dataArray { 
                 self.cycleModels.append(CycleModel(dict: dict))
-                //print(self.cycleModels.count)
             }
-        
-            
             finishCallback()
         }
     }

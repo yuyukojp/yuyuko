@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.4.2)
   - Kingfisher (6.3.0)
+  - LFLiveKit (2.6)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
+  - LFLiveKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - LFLiveKit
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
 
-PODFILE CHECKSUM: 3e821f66eca1b5f81e9a192517ab466949c68234
+PODFILE CHECKSUM: 63074db9917979b3fe2a5d64bd0bf8cf4e031be9
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
