@@ -46,7 +46,7 @@ extension newAccountViewController {
         setLeftBarButtonItem()
         setRightBarButtonItem()
         setupTableView()
-        self.navigationItem.title = "新規登録"        
+        self.navigationItem.title = "新規登録"
     }
        
     private func changeViewController() {
@@ -243,8 +243,7 @@ extension newAccountViewController: UITableViewDataSource {
         default:
             return 0
         }
-    }
-    
+    }    
 }
 
 extension newAccountViewController: UITableViewDelegate {
@@ -288,8 +287,8 @@ extension newAccountViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let itemCounts = 2
-        
+        let itemCounts = 10
+        print(dataSource.count)
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as? UserInfoCell else { return UITableViewCell() }
@@ -320,11 +319,11 @@ extension newAccountViewController: UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-//        dataSource[textField.tag] = textField.text ?? ""
+        // = ""//(textField.text ?? "") as String
     }
 
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        infoChecked[textField.tag] = textField.text?.count ?? 0 > 0
+//        infoChecked[textField.tag] = textField.text?.count ?? 0 > 0
 //        infoChecked[httpPortIndex] = true
 //        infoChecked[rtspPortIndex] = true
 //        updateSaveButton()

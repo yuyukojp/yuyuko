@@ -91,16 +91,12 @@ extension GameViewController {
 }
 //MARK:- 请求数据
 extension GameViewController {
-    
 
     fileprivate func loadData() {
-        
         gameVM.loadAllGameData {
             //1.展示全部内容
             self.collectionView.reloadData()
-
-            //1.展示推荐
-
+            //2.展示推荐
             self.gameView.groups = Array(self.gameVM.games[0..<10])
             //3.数据请求完成
             self.loadDataFinished()
@@ -126,10 +122,10 @@ extension GameViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        // 1.取出HeaderView
+        // 2.取出HeaderView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
         
-        // 2.给HeaderView设置属性
+        // 3.给HeaderView设置属性
         headerView.titleLabel.text = "全部"
         headerView.iconImageVIew.image = UIImage(named: "Img_orange")
         headerView.More_Btn.isHidden = true

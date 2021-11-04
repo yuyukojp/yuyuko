@@ -39,8 +39,7 @@ extension BaseViewModel {
                 self.anchorGroups.append(group)
             }
             
-            // 3.完成回调
- 
+            // 3.完成回调 
             NetworkTools.requestData(.get, URLString: URLString) { (result) in
                  //1.对结果进行处理
                  guard let resultDict = result as? [String: Any] else { return }

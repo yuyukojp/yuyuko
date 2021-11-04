@@ -43,9 +43,7 @@ class PageTitleView: UIView {
     //自定义构造函数
     init(frame: CGRect, titles: [String]) {
         self.titles = titles
-        
         super.init(frame: frame)
-        
         //设置UI界面
         setupUI()
     }
@@ -63,8 +61,7 @@ extension PageTitleView {
     private func setupUI() {
         //1. 添加UIScrollVIew
         addSubview(scrollView)
-        scrollView.frame = bounds
-        
+        scrollView.frame = bounds        
         //2. 添加tiitle对应的Label
         setupTitleLabels()
         

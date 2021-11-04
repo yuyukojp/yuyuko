@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     //懒加载属性 通过闭包来创建
     private lazy var pageTitleView : PageTitleView = { [weak self] in
         // 使用全局变量来定义大小
-       
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         
         let titles = ["推荐","学习","社团","娱乐"]
@@ -71,8 +70,7 @@ extension HomeViewController {
         //使用构造函数来创建
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "launcher_logo_2020")
            
-        //设置右侧的iteam
-       
+        //设置右侧的iteam       
         let size = CGSize(width: 40, height: 40)        
         //使用构造函数来实现⬆️
         let historyIteam = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)

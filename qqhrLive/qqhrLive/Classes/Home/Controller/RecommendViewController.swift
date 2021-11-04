@@ -38,7 +38,6 @@ extension RecommendViewController {
     override func setupUI() {
         //1. 调用super
         super.setupUI()
-
         //2. 将cycleView添加到UICollectionView中
         collectionView.addSubview(cycleView)
         //2.5 将game加入
