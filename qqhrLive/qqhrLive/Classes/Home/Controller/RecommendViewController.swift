@@ -42,7 +42,6 @@ extension RecommendViewController {
     override func setupUI() {
         //1. 调用super
         super.setupUI()
-
         //2. 将cycleView添加到UICollectionView中
         collectionView.addSubview(cycleView)
 <<<<<<< HEAD

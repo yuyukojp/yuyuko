@@ -6,6 +6,6 @@ target 'qqhrLive' do
 
 pod 'Alamofire'
 pod 'Kingfisher'
-
+pod 'LFLiveKit'
 
 end

@@ -1,9 +1,8 @@
 //
 //  NetworkTools.swift
-//  Alamofire的测试
+//  qqhrLive
 //
-//  Created by 1 on 16/9/19.
-//  Copyright © 2016年 小码哥. All rights reserved.
+//  Created by 金斗石 on 2021/4/6.
 //
 
 import UIKit

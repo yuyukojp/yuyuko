@@ -25,6 +25,8 @@ class AnchorModel: NSObject {
     @objc var online : Int = 0
     /// 所在城市
     @objc var anchor_city : String = ""
+    //视频播放地址
+    @objc var video_url : String = ""
     
     init(dict : [String : Any]) {
         super.init()

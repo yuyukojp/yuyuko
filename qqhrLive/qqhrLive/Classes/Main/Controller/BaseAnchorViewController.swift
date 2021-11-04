@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import AVKit
 
 private let kItemMargin : CGFloat = 10
 let kNormalItemH = kNormalItemW * 3 / 4
 let kPrettyItemH = kNormalItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
+var playerController = AVPlayerViewController()
+private var kMod = false
 
 private let kNormalCellID = "kNormalCellID"
 let kPrettyCellID = "kPrettyCellID"
@@ -110,7 +113,7 @@ extension BaseAnchorViewController: UICollectionViewDataSource {
 }
 
 //MARK:- 遵守uicollectionview的代理协议
-extension BaseAnchorViewController: UICollectionViewDelegate{
+extension BaseAnchorViewController: UICollectionViewDelegate,AVPlayerViewControllerDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //1.取出主播信息
         let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
@@ -119,13 +122,29 @@ extension BaseAnchorViewController: UICollectionViewDelegate{
     }
     private func presentShowRoomVc() {
         //1.创建showroomvx
-        let showRoomVc = RoomShowViewController()
-        //2.以model方式弹出
-        present(showRoomVc, animated: true, completion: nil)
+        guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
+      
+        avplayerModel(url: url, kMod: true)
     }
     private func pushNormalRoomVc() {
-        let normalRoomVc = RoomNormalViewController()
-        navigationController?.pushViewController(normalRoomVc, animated: true)
+        //let normalRoomVc = RoomNormalViewController()
+       // navigationController?.pushViewController(normalRoomVc, animated: true)
+        guard let url = URL(string: "https://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4") else { return }
+        avplayerModel(url: url, kMod: false)
+    }
+    //弹出avplayer方法
+    private func avplayerModel(url:URL, kMod:Bool) {
+        let player = AVPlayer(url: url)
+        playerController = AVPlayerViewController()
+        playerController.player = player
+        playerController.allowsPictureInPicturePlayback = false
+        playerController.delegate = self
+        playerController.player?.play()
         
+        if kMod == true {
+            navigationController?.pushViewController(playerController, animated: true)
+        } else {
+            self.present(playerController, animated: true, completion: nil)
+        }
     }
 }
